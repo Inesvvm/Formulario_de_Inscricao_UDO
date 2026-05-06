@@ -7,10 +7,11 @@
 }
 
 body{
+    
     background-color: #1E1F20;
 }
 header{
-    font-family: Merriweather;
+    font-family: Merriweather, Bahnschrift SemiBold, Arial;
     color: white;
     margin: 50px;
     padding: 10px;
@@ -21,23 +22,31 @@ header{
 
 main{
     color: white;
+    text-align: center;
     margin: 50px;
     font-size:medium;
-    text-align:justify;
-    margin-right: 60%;
+}
+h1{
+    font-size: 35px; 
+    color: #be0003; 
+    font-style: italic; 
+    font-family: Merriweather, Bahnschrift SemiBold, Arial;
 }
 
 .butao_formulário{
+    border: 3px solid #be0003;
+    color: goldenrod;
+    background-color: #202122;
     text-align: center;
-    size: 50px;
-    border-radius: 10px;
+    font-weight: 600;
+    text-decoration:none;/*tira o underline do herf*/
+    border-radius: 5px;
     padding: 10px;
-    background-color: rgb(121, 119, 194);
     transition: .5s;
 }
 
 .butao_formulário:hover{
-    border-color: black;
+    border-color: #be0003;
     background-color: white;
     color: red;
 }
