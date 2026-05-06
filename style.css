@@ -1,8 +1,45 @@
 
-header{
-    background-color: #7A1E1C;
-    padding: 15px;
-    
-    size: 20px;
+@font-face{
+    font-family: 'Merriweather';
+    src: url('../Merriweather/Merriweather-VariableFont_opsz\,wdth\,wght.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
+
+body{
+    background-color: #1E1F20;
+}
+header{
+    font-family: Merriweather;
+    color: white;
+    margin: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+main{
+    color: white;
+    margin: 50px;
+    font-size:medium;
+    text-align:justify;
+    margin-right: 60%;
+}
+
+.butao_formulário{
+    text-align: center;
+    size: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(121, 119, 194);
+    transition: .5s;
+}
+
+.butao_formulário:hover{
+    border-color: black;
+    background-color: white;
+    color: red;
+}
+
 
