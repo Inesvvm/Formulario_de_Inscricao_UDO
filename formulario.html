@@ -3,21 +3,25 @@
         <link rel="shortcut icon" href="../favicon_io/favicon.ico" type="image/x-icon">
         <meta charset="UTF-8">
         <title>Formulário de Inscrição UDO</title>
+        <link rel="stylesheet" href="style_Formulario.css">
     </head>
     
     <body>
-        <form name="Inscricao_UDO" method="post" enctype="text/plain">
-            <Label for="Nome">Nome:</Label>
-            <input type="text" name="Nome" id="Nome">
-            <br><br>
-            <Label for="Email">Email: </Label>
-            <input type="email" name="Email" id="Email">
-            <br><br>
-            <label for="Idade">Idade</label>
-            <input type="number" name="Idade" id="Idade">
-            <br><br>
-            <button type="button" onclick="enviar()">Enviar</button>
-        </form>
+        <div class="centro">
+            <form name="Inscricao_UDO" method="post" enctype="text/plain">
+                <h1>Dados Pessoais</h1>
+                <Label for="Nome">Nome:</Label>
+                <input type="text" name="Nome" id="Nome" >
+                <br><br>
+                <Label for="Email">Email: </Label>
+                <input type="email" name="Email" id="Email">
+                <br><br>
+                <label for="Idade: ">Idade</label>
+                <input type="number" name="Idade" id="Idade">
+                <br><br>
+                <button type="button" onclick="enviar()">Enviar</button>
+            </form>
+    </div>
         <script src="app.js"></script>
     </body>
 </html>
