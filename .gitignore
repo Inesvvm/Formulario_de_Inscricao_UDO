@@ -1,5 +1,1 @@
-# Ignorar a pasta da extensão Local History
-    .history/ 
-# Ignorar ficheiros do sistema (macOS e Windows) 
-    .DS_Store 
-    Thumbs.db
+.history/
