@@ -3,21 +3,63 @@
         <link rel="shortcut icon" href="../favicon_io/favicon.ico" type="image/x-icon">
         <meta charset="UTF-8">
         <title>Formulário de Inscrição UDO</title>
+        <link rel="stylesheet" href="style_Formulario.css">
     </head>
     
     <body>
-        <form name="Inscricao_UDO" method="post" enctype="text/plain">
-            <Label for="Nome">Nome:</Label>
-            <input type="text" name="Nome" id="Nome">
-            <br><br>
-            <Label for="Email">Email: </Label>
-            <input type="email" name="Email" id="Email">
-            <br><br>
-            <label for="Idade">Idade</label>
-            <input type="number" name="Idade" id="Idade">
-            <br><br>
-            <button type="button" onclick="enviar()">Enviar</button>
-        </form>
+        
+        <div class="Imagems"></div>
+
+            <!--Inicio das Bolas De Basket-->
+                <div class="Bola_BasktetBall">
+                        <img src="../Bola_de_BasketBall.png" width="60%">
+                </div>
+
+                <div class="Bola_BasktetBall1">
+                        <img src="../Bola_de_BasketBall.png" width="45%">
+                </div>
+            <!--Fim das Bolas De Basket-->
+
+            <!--Inicio das Bolas De Futebol-->
+                <div class="Bola_Futebol">
+                        <img src="../Bola_de_Futebol.png" width="55%">
+                </div>
+
+                <div class="Bola_Futebol1">
+                        <img src="../Bola_de_Futebol.png" width="40%">
+                </div>
+            <!--Fim das Bolas De Futebol-->
+
+            <!--Inicio das Bolas De Hoquei-->
+                <div class="Bola_Hoquei">
+                        <img src="../Bola-hoquei.png" width="80%">
+                </div>
+
+                <div class="Bola_Hoquei1">
+                        <img src="../Bola-hoquei.png" width="90%">
+                </div>
+
+            <!--Inicio das Bolas De Hoquei-->
+
+        </div>
+        <div class="centro">
+            
+            <form name="Inscricao_UDO" method="post" enctype="text/plain">
+                <h1>Dados Pessoais</h1>
+                <Label for="Nome">Nome:</Label><br>
+                <input type="text" name="Nome" id="Nome" placeholder="Insira o seu Nome"><!--O placeholder serve para inserir texto e dentro do input e quando for escrever texto dentro dele apagar-->
+                <br><br><hr><br>
+
+                <Label for="Email">Email: </Label><br>
+                <input type="email" name="Email" id="Email" placeholder="Insira o seu Email">
+                <br><br><hr><br>
+
+                <label for="Idade: ">Idade</label><br>
+                <input type="number" name="Idade" id="Idade" placeholder="Insira a sua Idade">
+                <br><br><hr><br>
+                <button type="button" onclick="enviar()" class="styleButao">Enviar</button>
+            </form>
+    </div>
         <script src="app.js"></script>
     </body>
 </html>

@@ -1,0 +1,27 @@
+body{
+    background-color: #1E1F20;
+    margin: 40px;
+    padding: 10px 10px 10px 10px;/*top, right, bottom, left*/
+}
+
+.centro{
+    
+    background-color: white;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    margin: 40px 400px;
+    padding: 25PX 100px;
+}
+ .centro input{
+    border-color: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px;
+    outline: none;
+ }
+h1{
+    text-align: center;
+}
+a
