@@ -1,4 +1,9 @@
 
+*{
+    border: 1px solid red;
+    
+}
+/*Criação da famila de texto*/
 @font-face{
     font-family: 'Merriweather';
     src: url('../Merriweather/Merriweather-VariableFont_opsz\,wdth\,wght.ttf') format('truetype');
@@ -7,48 +12,41 @@
 }
 
 body{
-    
-    background-color: #1E1F20;
-}
-header{
-    font-family: Merriweather, Bahnschrift SemiBold, Arial;
-    color: white;
-    margin: 50px;
-    padding: 10px;
-    text-align: center;
-    font-size: 50px;
-}
-
-
-main{
-    color: white;
-    text-align: center;
-    margin: 50px;
-    font-size:medium;
-}
-h1{
-    font-size: 35px; 
-    color: #be0003; 
-    font-style: italic; 
-    font-family: Merriweather, Bahnschrift SemiBold, Arial;
-}
-
-.butao_formulário{
-    border: 3px solid #be0003;
-    color: goldenrod;
-    background-color: #202122;
-    text-align: center;
-    font-weight: 600;
-    text-decoration:none;/*tira o underline do herf*/
-    border-radius: 5px;
-    padding: 10px;
-    transition: .5s;
-}
-
-.butao_formulário:hover{
-    border-color: #be0003;
     background-color: white;
-    color: red;
 }
 
+.header{
+    display: flex;
+    align-items: center;/*alinha os itens no eixo do y(vertical)*/
+    justify-content: space-between;/*alinha os itens no eixo do x (horizontal)* e deixas as laterias coladas e o meio no centro/
+    font-family: Merriweather, Bahnschrift SemiBold, Arial;/*Familia de texto feita manualmente*/
+    margin: 20px 0px 20px 0px;/*top right bottom left*/
+    font-size: 25px;
+    gap: 20px;/*espaço entre os itens*/
+    
+}
+
+.header_esquerda{
+    margin-left: 5%;
+    display: flex;
+}
+
+.header_centro{
+    display: flex;/*Os elemetos ficam lado a lado*/
+    align-items: center;/*alinha os itens no eixo do y(vertical)*/
+    justify-content: center;
+    margin-left: 7%;
+    display: flex;
+    align-items: center;
+
+}
+
+.header_dierita{
+    display: flex;
+    margin-right: 5%;
+    gap: 20px;/*espaço entre os itens*/
+}
+.logo{
+    width: 5%;/*criada a div para remover um espaço que aparecia ao adicionar uma imagem*/
+}
 
