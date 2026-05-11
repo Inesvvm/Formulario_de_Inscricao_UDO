@@ -83,7 +83,7 @@ hr{
 .Bola_BasktetBall1{
     position: absolute;
     z-index: -1; /* Move para trás */
-    margin-top: 350px;
+    margin-top: 460px;
     margin-left: 590px;
     border-radius: 50%;
       
@@ -93,7 +93,7 @@ hr{
 .Bola_Futebol{
     position: absolute;
     z-index: -1;
-    margin-top: 355px;
+    margin-top: 450px;
     margin-left: 710px;
 }
 
@@ -105,15 +105,15 @@ hr{
     margin-left: 480px;
 }
 
-/*Posição da bola de hoquei em cima*/
+/*Posição da bola de hoquei em baixo*/
 .Bola_Hoquei{
     position: absolute;
     z-index: -2;
-    margin-top: 300px;
+    margin-top: 380px;
     margin-left: 730px;
 }
 
-/*Posição da bola de hoquei em baixo*/
+/*Posição da bola de hoquei em cima*/
 .Bola_Hoquei1{
     position: absolute;
     z-index: -2;
