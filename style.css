@@ -1,52 +1,133 @@
+/*Importação da Familia*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 
 *{
     border: 1px solid red;
-    
-}
-/*Criação da famila de texto*/
-@font-face{
-    font-family: 'Merriweather';
-    src: url('../Merriweather/Merriweather-VariableFont_opsz\,wdth\,wght.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;/*Serve para definir o tamanho total de um elemento (largura e altura)*/
 }
 
 body{
-    background-color: white;
-}
-
-.header{
-    display: flex;
-    align-items: center;/*alinha os itens no eixo do y(vertical)*/
-    justify-content: space-between;/*alinha os itens no eixo do x (horizontal)* e deixas as laterias coladas e o meio no centro/
-    font-family: Merriweather, Bahnschrift SemiBold, Arial;/*Familia de texto feita manualmente*/
-    margin: 20px 0px 20px 0px;/*top right bottom left*/
-    font-size: 25px;
-    gap: 20px;/*espaço entre os itens*/
+    display: block;/*Faz que o elemento se comporte como um bloco*/
+    min-height: 100vh;/*Serve para ocupar a página toda*/
+    font-family: "Merriweather Sans", 'Times New Roman', Times, serif;
+    background-color: #1C1C1A;
+    
     
 }
+/*Inicio da classe Header*/
+    .header{
+        display: flex;
+        flex-wrap: wrap;/*Faz que os itens quebrem em linhas se não houver espaço*/
+        align-items: center;/*alinha os itens no eixo do y(vertical)*/
+        justify-content: space-between;/*alinha os itens no eixo do x (horizontal)* e deixas as laterias coladas e o meio no centro*/
+        margin: 20px 0px 20px 0px;/*top right bottom left*/
+        font-size: 25px;
+        gap: 20px;/*espaço entre os itens*/
+        color: white;
+        
+    }
+    /*Inicio da subclasse Header_Esquerda*/
+    .header_esquerda{
+        display: flex;
+        margin-left: 5%;
+        
+    }
 
-.header_esquerda{
-    margin-left: 5%;
-    display: flex;
-}
+    .header_esquerda a{
+        text-decoration: none;
+        color: white;
+        transition: 0.5s;
+    }
 
-.header_centro{
-    display: flex;/*Os elemetos ficam lado a lado*/
-    align-items: center;/*alinha os itens no eixo do y(vertical)*/
-    justify-content: center;
-    margin-left: 7%;
-    display: flex;
-    align-items: center;
+    .header_esquerda a:hover{
+        color: red;
+    }
+    /*Fim da subclasse Header_Esquerda*/
 
-}
+    /*Inicio da subclasse Header_Centro*/
+    .header_centro{
+        display: flex;/*Os elemetos ficam lado a lado*/
+        align-items: center;/*alinha os itens no eixo do y(vertical)*/
+        justify-content: center;
+        margin-left: 7%;
+        display: flex;
+        align-items: center;
 
-.header_dierita{
-    display: flex;
-    margin-right: 5%;
-    gap: 20px;/*espaço entre os itens*/
-}
-.logo{
-    width: 5%;/*criada a div para remover um espaço que aparecia ao adicionar uma imagem*/
-}
+    }
 
+    .header_centro h1{
+        font-size: 40px;
+    }
+
+    .header_centro img{
+        width: 50px;
+    }
+
+    /*Fim da subclasse Header_Centro*/
+
+
+    /*Inicio da subclasse Header_Direita*/
+    .header_dierita{
+        display: flex;
+        margin-right: 5%;
+        gap: 20px;/*espaço entre os itens*/
+    }
+
+    .header_dierita a{
+        text-decoration: none;
+        color: white;
+        transition: 0.5s;
+    }
+
+    .header_dierita a:hover{
+        color: red;
+    }
+    /*Fim da subclasse Header_Direita*/
+/*Fim da classe Header*/
+
+/*Inicio da classe Main*/
+    .main{
+        display: flex;
+        justify-content:space-around;/*Alinha no eixo do x*/
+        align-items: center;/*Alinha no eixo do y*/
+        color: white;
+    }
+
+    /*Inicio da subclasse Main_esquerda*/
+    .main_esquerda{
+        display: flex;
+        padding: 10px;
+    }
+    /*Fim da subclasse Main_esquerda*/
+
+    /*Inicio da subclasse Main_Direita*/
+    .main_direita{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;/*Alinha no eixo do x*/
+        padding: 10px 10px;
+        flex: 1;/*Faz que os intens ocupem o mesmo espaço*/
+    }
+
+    .main_direita h2{
+        font-size: 30px;
+        color: red;
+    }
+    .main_direita p1{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main_direita p{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    /*Fim da subclasse Main_Direita*/
+/*Fim da classe Main*/
