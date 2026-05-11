@@ -12,31 +12,31 @@
 
             <!--Inicio das Bolas De Basket-->
                 <div class="Bola_BasktetBall">
-                        <img src="../Bola_de_BasketBall.png" width="60%">
+                        <img src="Bola_de_BasketBall.png" width="60%">
                 </div>
 
                 <div class="Bola_BasktetBall1">
-                        <img src="../Bola_de_BasketBall.png" width="45%">
+                        <img src="Bola_de_BasketBall.png" width="45%">
                 </div>
             <!--Fim das Bolas De Basket-->
 
             <!--Inicio das Bolas De Futebol-->
                 <div class="Bola_Futebol">
-                        <img src="../Bola_de_Futebol.png" width="55%">
+                        <img src="Bola_de_Futebol.png" width="55%">
                 </div>
 
                 <div class="Bola_Futebol1">
-                        <img src="../Bola_de_Futebol.png" width="40%">
+                        <img src="Bola_de_Futebol.png" width="40%">
                 </div>
             <!--Fim das Bolas De Futebol-->
 
             <!--Inicio das Bolas De Hoquei-->
                 <div class="Bola_Hoquei">
-                        <img src="../Bola-hoquei.png" width="80%">
+                        <img src="Bola-hoquei.png" width="80%">
                 </div>
 
                 <div class="Bola_Hoquei1">
-                        <img src="../Bola-hoquei.png" width="90%">
+                        <img src="Bola-hoquei.png" width="90%">
                 </div>
 
             <!--Inicio das Bolas De Hoquei-->
@@ -54,9 +54,14 @@
                 <input type="email" name="Email" id="Email" placeholder="Insira o seu Email">
                 <br><br><hr><br>
 
-                <label for="Idade: ">Idade</label><br>
+                <label for="Idade">Idade</label><br>
                 <input type="number" name="Idade" id="Idade" placeholder="Insira a sua Idade">
                 <br><br><hr><br>
+
+                <label for="Num_tel">Telefone</label>
+                <input type="text" id="Telemovel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Insira o seu numero de Telefone" maxlength="9"/><!--O oniinput não permite inserir letras e substitui numneros e o maxlength só deixa colocar 9 digitos-->
+                
+                <br><br><br><hr><br>
                 <button type="button" onclick="enviar()" class="styleButao">Enviar</button>
             </form>
     </div>
