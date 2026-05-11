@@ -1,54 +1,215 @@
+/*Importação da Familia*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-@font-face{
-    font-family: 'Merriweather';
-    src: url('../Merriweather/Merriweather-VariableFont_opsz\,wdth\,wght.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;/*Serve para definir o tamanho total de um elemento (largura e altura)*/
 }
 
 body{
+    display: block;/*Faz que o elemento se comporte como um bloco*/
+    min-height: 100vh;/*Serve para ocupar a página toda*/
+    font-family: "Merriweather Sans", 'Times New Roman', Times, serif;
+    background-color: #1C1C1A;
     
-    background-color: #1E1F20;
+    
 }
-header{
-    font-family: Merriweather, Bahnschrift SemiBold, Arial;
-    color: white;
-    margin: 50px;
-    padding: 10px;
-    text-align: center;
-    font-size: 50px;
-}
+/*Inicio da classe Header*/
+    .header{
+        display: flex;
+        flex-wrap: wrap;/*Faz que os itens quebrem em linhas se não houver espaço*/
+        align-items: center;/*alinha os itens no eixo do y(vertical)*/
+        justify-content: space-between;/*alinha os itens no eixo do x (horizontal)* e deixas as laterias coladas e o meio no centro*/
+        margin: 20px 0px 20px 0px;/*top right bottom left*/
+        font-size: 25px;
+        gap: 20px;/*espaço entre os itens*/
+        color: white;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 50px;
+        
+    }
+    /*Inicio da subclasse Header_Esquerda*/
+    .header_esquerda{
+        display: flex;
+        margin-left: 5%;
+        
+    }
+
+    .header_esquerda a{
+        text-decoration: none;
+        color: white;
+        transition: 0.5s;
+    }
+
+    .header_esquerda a:hover{
+        color: red;
+    }
+    /*Fim da subclasse Header_Esquerda*/
+
+    /*Inicio da subclasse Header_Centro*/
+    .header_centro{
+        display: flex;/*Os elemetos ficam lado a lado*/
+        align-items: center;/*alinha os itens no eixo do y(vertical)*/
+        justify-content: center;
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .header_centro h1{
+        font-size: 40px;
+    }
+
+    .header_centro img{
+        width: 50px;
+    }
+
+    /*Fim da subclasse Header_Centro*/
 
 
-main{
-    color: white;
-    text-align: center;
-    margin: 50px;
-    font-size:medium;
-}
-h1{
-    font-size: 35px; 
-    color: #be0003; 
-    font-style: italic; 
-    font-family: Merriweather, Bahnschrift SemiBold, Arial;
-}
+    /*Inicio da subclasse Header_Direita*/
+    .header_dierita{
+        display: flex;
+        margin-right: 5%;
+        gap: 20px;/*espaço entre os itens*/
+    }
 
-.butao_formulário{
-    border: 3px solid #be0003;
-    color: goldenrod;
-    background-color: #202122;
-    text-align: center;
-    font-weight: 600;
-    text-decoration:none;/*tira o underline do herf*/
-    border-radius: 5px;
-    padding: 10px;
-    transition: .5s;
-}
+    .header_dierita a{
+        text-decoration: none;
+        color: white;
+        transition: 0.5s;
+    }
 
-.butao_formulário:hover{
-    border-color: #be0003;
-    background-color: white;
-    color: red;
-}
+    .header_dierita a:hover{
+        color: red;
+    }
+    
+    /*Fim da subclasse Header_Direita*/
+/*Fim da classe Header*/
 
 
+
+/*Inicio da classe Titulo*/
+    .Titulo{
+        display: flex;
+        position: relative;
+        justify-content: right;
+        width: auto;
+        height: auto;
+        margin-bottom: -5%;
+    }
+    
+    .Cima{
+        font-size: 40px;
+        color: red;
+        padding-right: 23%;
+        z-index: -1;
+    }
+
+    .Baixo{
+        position: absolute;
+        color: white;
+        padding-top: 40px;
+        padding-right: 15%;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+        z-index: 1;
+    }
+
+/*Inicio da classe Titulo*/
+
+
+/*Inicio da classe Main*/
+    .main{
+        margin-top: 20px;
+        display: flex;
+        justify-content:space-between;/*Alinha no eixo do x*/
+        align-items: center;/*Alinha no eixo do y*/
+        color: white;
+    }
+
+    /*Inicio da subclasse Main_esquerda*/
+    .main_esquerda{
+        flex: 2;
+        height: 400px;
+        padding: 10px;
+        display: flex;
+        position: relative;
+    }
+    
+    .Desporto1 img{
+        position: absolute;
+        width: 300px;
+        z-index: 1;
+        margin-top: -5%;
+        border-radius: 5%;
+    }
+
+    .Desporto2 img{
+        position: absolute;
+        width: 350px;
+        border-radius: 5%;
+        align-self: center;
+        margin-top: 70px;
+        margin-left: 160px;
+        z-index: 2;
+    }
+
+    .Desporto3 img{
+        position: absolute;
+        width: 300px;
+        border-radius: 5%;
+        
+        margin-top: 180px;
+        margin-left: 350px;
+        z-index: 2;
+    }
+
+    /*Fim da subclasse Main_esquerda*/
+
+    /*Inicio da subclasse Main_Direita*/
+    .main_direita{
+        display: flex;
+        flex: 2;
+        flex-wrap: wrap;
+        justify-content: center;/*Alinha no eixo do x*/
+        padding: 10px 10px;
+    }
+
+    .main_direita h2{
+        font-size: 30px;
+        color: red;
+    }
+
+    .main_direita p{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+
+    .butao_formulário a{
+        text-decoration: none;
+        color: red;
+        border: 2px solid red;
+        border-radius: 20px;
+        padding: 10px 10px;
+        transition: 1s;
+
+    }
+
+    .butao_formulário a:hover{
+        border: 3px solid #1c1a1c;
+        background-color: rgb(201, 22, 22);
+        color: #1c1a1c;
+    }
+    /*Fim da subclasse Main_Direita*/
+/*Fim da classe Main*/
