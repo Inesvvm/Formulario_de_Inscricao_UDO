@@ -55,11 +55,11 @@
                 <br><br><hr><br>
 
                 <label for="Idade">Idade</label><br>
-                <input type="number" name="Idade" id="Idade" placeholder="Insira a sua Idade">
+                <input type="text" name="Idade" id="Idade" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira a sua Idade" maxlength="3"><!--O oniinput não permite inserir letras e o inputmode serve para só aparecer digitos no telemovel-->
                 <br><br><hr><br>
 
                 <label for="Num_tel">Telefone</label>
-                <input type="text" id="Telemovel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Insira o seu numero de Telefone" maxlength="9"/><!--O oniinput não permite inserir letras e substitui numneros e o maxlength só deixa colocar 9 digitos-->
+                <input type="text" name="Telemovel" id="Telemovel" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Insira o seu numero de Telefone" maxlength="9"/><!--O oniinput não permite inserir letras  e o maxlength só deixa colocar 9 digitos-->
                 
                 <br><br><br><hr><br>
                 <button type="button" onclick="enviar()" class="styleButao">Enviar</button>
