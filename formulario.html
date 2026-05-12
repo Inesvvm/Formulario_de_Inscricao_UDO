@@ -13,31 +13,60 @@
                     <form>
                         <h1>Dados pessoais</h1>
                         <label>Nome</label>
-                        <input type="text" id="Nome" placeholder="Insira o seu Nome"><!--O placehoder serve para escrever dentro do Input-->
+                        <input type="text" id="Nome" placeholder="Insira o seu Nome">
+                        <!--O placehoder serve para escrever dentro do Input-->
                         
-                        <label>E-mail</label>
+                        <label>Data de Nascimento</label>
+                        <input type="date" id="Data_Nascimento">
+
+                        <label>Nº do Contribuinte/NIF</label>
+                        <input type="text" id="NIF" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Ex: 123456789">
+                        <!--O input mode serve para que no telémovel apareça somente números, o oninput só deixa colocar números e o maxlength só deixa colocar 9 numeros-->
+
+                        <label>BI/CC</label>
+                        <input type="text" id="BI_CC" pattern="[0-9]{8} [0-9]{1} [A-Z]{2}[0-9]{1}" maxlength="14" placeholder="Ex: 12345678 9 AB0">
+                        <!--O pattern serve para seguir um formato expecífico sendo que o [0-9]/[A-Z] é os digitos que são permitidos e o {9}/{2}/{1} é a quantidade desses valores que podem ser inseridos-->
+
+                        <label>Morada</label>
+                        <input type="text" id="Morada" placeholder="Insira a sua Morada">
+
+                        <label>Localidade</label>
+                        <input type="text" id="Localidade" placeholder="Insira a sua Localidade">
+                        
+                        <label>Código Postal</label>
+                        <input type="text" id="Cod_Postal" pattern="[0-9]{4}-[0-9]{3}" inputmode="numeric" maxlength="8" placeholder="Ex: XXXX-YYY">
+                        
+                        <button id="Seguinte" class="StyleButao">Próxima Pagina</button>
+                    </form>
+                </div>
+            <!--Fim da classe dados pessoais-->
+
+            <!--Inicio da classe Contactos-->
+                <div class="Contactos">
+                    <form>
+                        <h1>Contactos</h1>
+                        <label>Próprio</label>
+                        <input type="text" id="Tel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o seu Nº Telefone">
                         <input type="text" id="Email" placeholder="Insira o seu E-mail">
 
-                        <label>Idade</label>
-                        <input type="text" id="Idade" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira a sua idade"><!--O input mode serve para que no telémovel apareça somente números, o oninput só deixa colocar números-->
+                        <label>Pai</label>
+                        <input type="text" id="Tel_Pai" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Nº Telefone">
+                        <input type="text" id="Email_Pai" placeholder="Insira o E-mail">
 
-                        <label>Telefone</label>
-                        <input type="text" id="Telemovel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Telefone">
+                        <label>Mãe</label>
+                        <input type="text" id="Tel_Mãe" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Nº Telefone">
+                        <input type="text" id="Email_Mãe" placeholder="Insira o E-mail">
 
-                        <button class="StyleButao">Próxima Pagina</button>
+                        <label>Urgente</label>
+                        <input type="text" id="Urgente" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Nº Telefone">
+                        <input type="text" id="Email_Urgente" placeholder="Insira o E-mail">
+
+                        
+                        <button id="Anterior">Página Anterior</button>
+                        <button id="Seguinte">Próxima Página</button>
                     </form>
                 </div>
-            <!--Fim da classe dados pessoais-->
-
-
-            <!--Inicio da classe dados adicionais-->
-                <div class="Dados_Adicionais">
-                    <form>
-
-                        <button id="pro"></button>
-                    </form>
-                </div>
-            <!--Fim da classe dados pessoais-->
+            <!--Fim da classe Contactos-->
         </div>
         <script src="app.js"></script>
     </body>
