@@ -1,0 +1,32 @@
+<html lang="pt-pt">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <Title>Formulário UDO</Title>
+        <link rel="stylesheet" href="style_Formulario.css">
+    </head>
+
+    <body>
+        <div class="main_Form">
+            <div class="Dados_Pesoais">
+                <form>
+                    <h1>Dados pessoais</h1>
+                    <label>Nome</label>
+                    <input type="text" id="Nome" placeholder="Insira o seu Nome">
+                    
+                    <label>E-mail</label>
+                    <input type="text" id="Email" placeholder="Insira o seu E-mail">
+
+                    <label>Idade</label>
+                    <input type="text" id="Idade" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira a sua idade">
+
+                    <label>Telefone</label>
+                    <input type="text" id="Telemovel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Telefone">
+
+                    <button class="StyleButao">Próxima Pagina</button>
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,6 @@
+*{
+    
+    margin: 0;/*Serve para deixar sem margem*/
+    padding: 0;/*Serve para deixar sem interior*/
+    box-sizing: border-box;/*Serve para definir o tamanho total de um elemento (largura e altura)*/
+}
