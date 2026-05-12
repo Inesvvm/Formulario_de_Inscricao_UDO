@@ -8,25 +8,37 @@
 
     <body>
         <div class="main_Form">
-            <div class="Dados_Pesoais">
-                <form>
-                    <h1>Dados pessoais</h1>
-                    <label>Nome</label>
-                    <input type="text" id="Nome" placeholder="Insira o seu Nome">
-                    
-                    <label>E-mail</label>
-                    <input type="text" id="Email" placeholder="Insira o seu E-mail">
+            <!--Inicio da classe dados pessoais-->
+                <div class="Dados_Pesoais">
+                    <form>
+                        <h1>Dados pessoais</h1>
+                        <label>Nome</label>
+                        <input type="text" id="Nome" placeholder="Insira o seu Nome"><!--O placehoder serve para escrever dentro do Input-->
+                        
+                        <label>E-mail</label>
+                        <input type="text" id="Email" placeholder="Insira o seu E-mail">
 
-                    <label>Idade</label>
-                    <input type="text" id="Idade" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira a sua idade">
+                        <label>Idade</label>
+                        <input type="text" id="Idade" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira a sua idade"><!--O input mode serve para que no telémovel apareça somente números, o oninput só deixa colocar números-->
 
-                    <label>Telefone</label>
-                    <input type="text" id="Telemovel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Telefone">
+                        <label>Telefone</label>
+                        <input type="text" id="Telemovel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Telefone">
 
-                    <button class="StyleButao">Próxima Pagina</button>
-                </form>
-            </div>
+                        <button class="StyleButao">Próxima Pagina</button>
+                    </form>
+                </div>
+            <!--Fim da classe dados pessoais-->
+
+
+            <!--Inicio da classe dados adicionais-->
+                <div class="Dados_Adicionais">
+                    <form>
+
+                        <button id="pro"></button>
+                    </form>
+                </div>
+            <!--Fim da classe dados pessoais-->
         </div>
-        
+        <script src="app.js"></script>
     </body>
 </html>
