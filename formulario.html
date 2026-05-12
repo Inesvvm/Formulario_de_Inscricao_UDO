@@ -45,21 +45,44 @@
                 <div class="Contactos">
                     <form>
                         <h1>Contactos</h1>
-                        <label>Próprio</label>
-                        <input type="text" id="Tel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o seu Nº Telefone">
-                        <input type="text" id="Email" placeholder="Insira o seu E-mail">
+                        <!--Início da subclasse Contacto_Próprio-->
+                            <div class="Proprio">
+                                <h2>Próprio</h2>
+                                <input type="text" id="Tel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o seu Nº Telefone">
+                                <input type="text" id="Email" placeholder="Insira o seu E-mail">
+                            </div>
+                        <!--Fim da subclasse Contacto_Próprio-->
 
-                        <label>Pai</label>
-                        <input type="text" id="Tel_Pai" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Nº Telefone">
-                        <input type="text" id="Email_Pai" placeholder="Insira o E-mail">
+                        <!--Início da subclasse Contacto_Pai-->
+                            <div class="Contacto_Pai">
+                                <h2>Pai</h2>
+                                <label>Telefone</label>
+                                <input type="text" id="Tel_Pai" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Nº Telefone">
+                                
+                                <label>E-mail</label>
+                                <input type="text" id="Email_Pai" placeholder="Insira o E-mail">
+                            </div>
+                        <!--Fim da subclasse Contacto_Pai-->
 
-                        <label>Mãe</label>
-                        <input type="text" id="Tel_Mãe" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Nº Telefone">
-                        <input type="text" id="Email_Mãe" placeholder="Insira o E-mail">
+                        <!--Início da subclasse Contacto_Mae-->
+                            <div class="Contacto_Mae">
+                                <h2>Mãe</h2>
+                                <label>Telefone</label>
+                                <input type="text" id="Tel_Mãe" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Nº Telefone">
+                                
+                                <label>E-mail</label>
+                                <input type="text" id="Email_Mãe" placeholder="Insira o E-mail">
+                            </div>
+                        <!--Fim da subclasse Contacto_Mae-->
 
-                        <label>Urgente</label>
-                        <input type="text" id="Urgente" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Nº Telefone">
-                        <input type="text" id="Email_Urgente" placeholder="Insira o E-mail">
+
+                        <!--Início da subclasse Contacto_Urgente-->
+                            <div class="Contacto_Urgente">
+                                <h2>Urgente</h2>
+                                <input type="text" id="Urgente" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" placeholder="Insira o Nº Telefone">
+                                <input type="text" id="Email_Urgente" placeholder="Insira o E-mail">
+                            </div>
+                        <!--Fim da subclasse Contacto_Urgente-->
 
                         
                         <button id="Anterior">Página Anterior</button>
