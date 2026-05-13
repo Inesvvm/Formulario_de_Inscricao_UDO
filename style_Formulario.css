@@ -1,5 +1,5 @@
 *{
-    border: 1px solid red;
+    
     margin: 0;/*Serve para deixar sem margem*/
     padding: 0;/*Serve para deixar sem interior*/
     box-sizing: border-box;/*Serve para definir o tamanho total de um elemento (largura e altura)*/
@@ -26,20 +26,83 @@ body{
 
     /*Inicio Da Classe main_Form_Esquerda*/
         .main_Form_Esquerda{
-            flex: 0.9;
-            height: 100%;
+            flex: 1;/*Diz o espaço que vai ocupar*/
             overflow: hidden;
         }
         .Main_Form_Esquerda img{
-            width: 50%;
+            width: 100%;
+            height: 100%;
         }
     /*Fim Da Classe Main_Form_Esquerda*/
 
 
     /*Inicio Da Classe main_Form_Direita*/
         .main_Form_Direita{
-            flex: 2;
-            justify-content: right;
+            flex: 2;/*Diz o espaço que vai ocupar*/
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
+
+        /*Inicio da subclasse Dados_Pesoais*/
+            .Dados_Pesoais{
+                flex-direction: row;
+                border: 1px solid red;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                overflow: hidden;
+            }
+
+            .Dados_Pesoais h1{
+                font-size: 45px;
+                justify-content: center;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .Dados_Pesoais h2{
+                font-size: 20px;
+            }
+
+            .Dados_Pesoais input{
+                
+            }
+
+            /*Inico da Configuração das subclasses Dados_Pesoais*/
+            .Nome_Data, .Nome_Data_Input{
+                display: flex;
+                
+            }
+            .H2_1, .Input1{
+                flex: 1;
+            }
+            .H2_2, .Input2{
+                flex: 1;
+            }
+
+
+        /*Fim da subclasse Dados_Pesoais*/
+
+        /*Inicio da subclasse Contactos*/
+            .Contactos{
+                display: none;
+            }
+        /*Fim da subclasse Contactos*/
+
+        /*Inicio da subclasse Pais*/
+            .Pais{
+                display: none;
+            }
+        /*Fim da subclasse Pais*/
+
+        /*Inicio da subclasse Observacao*/
+            .Observacao{
+                display: none;
+            }
+        /*Fim da subclasse Observacao*/
+        
     /*Fim Da Classe main_Direita*/
 /*Fim Da Classe main_Form*/
