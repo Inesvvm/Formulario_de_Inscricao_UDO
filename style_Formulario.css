@@ -62,7 +62,7 @@ body{
             }
         /*Inicio da subclasse Dados_Pesoais*/
             .Dados_Pesoais{
-                display: none;
+                display: block;
                 flex-direction: row;
                 width: 100%;
                 height: 100%;
@@ -283,7 +283,7 @@ body{
 
         /*Inicio da subclasse Observacao*/
             .Observacao{
-                display: block;
+                display: none;
                 flex-direction: row;/*Alinha na horizotal*/
                 width: 100%;
                 height: 100%;
