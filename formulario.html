@@ -8,149 +8,154 @@
 
     <body>
         <div class="main_Form">
-            <!--Inicio da classe dados pessoais-->
-                <div class="Dados_Pesoais">
-                    <form>
-                        <h1>Dados pessoais</h1>
-                        <label>Nome</label>
-                        <input type="text" id="Nome" oninput="this.value=this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');"  placeholder="Insira o seu Nome">
-                        <!--O placehoder serve para escrever dentro do Input o oniput serve para aceitar apaenas letras neste campo-->
-                        
-                        <label>Data de Nascimento</label>
-                        <input type="text" id="Data_Nascimento" inputmode="numeric" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" maxlength="10" placeholder="Ex: dd/mm/aaaa">
-                        <!--O input mode serve para que no telémovel apareça somente números, o pattern é forma que se vai escrever, o oninput só deixa colocar números e o maxlength só deixa colocar 10 numeros-->
+            <div class="main_Form_Esquerda">
+                <img src="UDO_Basketball.jpg" alt="UDO_Basketball">
+            </div>
+            <div class="main_Form_Direita">
+                <!--Inicio da classe dados pessoais-->
+                    <div class="Dados_Pesoais">
+                        <form>
+                            <h1>Dados pessoais</h1>
+                            <label>Nome</label>
+                            <input type="text" id="Nome" oninput="this.value=this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');"  placeholder="Insira o seu Nome">
+                            <!--O placehoder serve para escrever dentro do Input o oniput serve para aceitar apaenas letras neste campo-->
+                            
+                            <label>Data de Nascimento</label>
+                            <input type="text" id="Data_Nascimento" inputmode="numeric" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" maxlength="10" placeholder="Ex: dd/mm/aaaa">
+                            <!--O input mode serve para que no telémovel apareça somente números, o pattern é forma que se vai escrever, o oninput só deixa colocar números e o maxlength só deixa colocar 10 numeros-->
 
-                        <label>Nº do Contribuinte/NIF</label>
-                        <input type="text" id="NIF" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Ex: 123456789">
-                        <!--O input mode serve para que no telémovel apareça somente números, o oninput só deixa colocar números e o maxlength só deixa colocar 9 numeros-->
+                            <label>Nº do Contribuinte/NIF</label>
+                            <input type="text" id="NIF" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Ex: 123456789">
+                            <!--O input mode serve para que no telémovel apareça somente números, o oninput só deixa colocar números e o maxlength só deixa colocar 9 numeros-->
 
-                        <label>BI/CC</label>
-                        <input type="text" id="BI_CC" pattern="[0-9]{8} [0-9]{1} [A-Z]{2}[0-9]{1}" maxlength="14" placeholder="Ex: 12345678 9 AB0">
-                        <!--O pattern serve para seguir um formato expecífico sendo que o [0-9]/[A-Z] é os digitos que são permitidos e o {9}/{2}/{1} é a quantidade desses valores que podem ser inseridos-->
+                            <label>BI/CC</label>
+                            <input type="text" id="BI_CC" pattern="[0-9]{8} [0-9]{1} [A-Z]{2}[0-9]{1}" maxlength="14" placeholder="Ex: 12345678 9 AB0">
+                            <!--O pattern serve para seguir um formato expecífico sendo que o [0-9]/[A-Z] é os digitos que são permitidos e o {9}/{2}/{1} é a quantidade desses valores que podem ser inseridos-->
 
-                        <label>Morada</label>
-                        <input type="text" id="Morada" placeholder="Insira a sua Morada">
+                            <label>Morada</label>
+                            <input type="text" id="Morada" placeholder="Insira a sua Morada">
 
-                        <label>Localidade</label>
-                        <input type="text" id="Localidade" placeholder="Insira a sua Localidade">
-                        
-                        <label>Código Postal</label>
-                        <input type="text" id="Cod_Postal" pattern="[0-9]{4}-[0-9]{3}" inputmode="numeric" maxlength="8" placeholder="Ex: XXXX-YYY">
-                        
-                        <button id="Seguinte" class="StyleButao">Próxima Página</button>
-                    </form>
-                </div>
-            <!--Fim da classe dados pessoais-->
+                            <label>Localidade</label>
+                            <input type="text" id="Localidade" placeholder="Insira a sua Localidade">
+                            
+                            <label>Código Postal</label>
+                            <input type="text" id="Cod_Postal" pattern="[0-9]{4}-[0-9]{3}" inputmode="numeric" maxlength="8" placeholder="Ex: XXXX-YYY">
+                            
+                            <button id="Seguinte" class="StyleButao">Próxima Página</button>
+                        </form>
+                    </div>
+                <!--Fim da classe dados pessoais-->
 
-            <!--Inicio da classe Contactos-->
-                <div class="Contactos">
-                    <form>
-                        <h1>Contactos</h1>
-                        <!--Início da subclasse Contacto_Próprio-->
-                            <div class="Proprio">
-                                <h2>Próprio</h2>
-                                <label>Telefone</label>
-                                <input type="text" id="Tel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
-                                
-                                <label>E-mail</label>
-                                <input type="email" id="Email" placeholder="Insira E-mail">
-                            </div>
-                        <!--Fim da subclasse Contacto_Próprio-->
+                <!--Inicio da classe Contactos-->
+                    <div class="Contactos">
+                        <form>
+                            <h1>Contactos</h1>
+                            <!--Início da subclasse Contacto_Próprio-->
+                                <div class="Proprio">
+                                    <h2>Próprio</h2>
+                                    <label>Telefone</label>
+                                    <input type="text" id="Tel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
+                                    
+                                    <label>E-mail</label>
+                                    <input type="email" id="Email" placeholder="Insira E-mail">
+                                </div>
+                            <!--Fim da subclasse Contacto_Próprio-->
 
-                        <!--Início da subclasse Contacto_Pai-->
-                            <div class="Contacto_Pai">
-                                <h2>Pai</h2>
-                                <label>Telefone</label>
-                                <input type="text" id="Tel_Pai" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
-                                
-                                <label>E-mail</label>
-                                <input type="email" id="Email_Pai" placeholder="Insira o E-mail">
-                            </div>
-                        <!--Fim da subclasse Contacto_Pai-->
+                            <!--Início da subclasse Contacto_Pai-->
+                                <div class="Contacto_Pai">
+                                    <h2>Pai</h2>
+                                    <label>Telefone</label>
+                                    <input type="text" id="Tel_Pai" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
+                                    
+                                    <label>E-mail</label>
+                                    <input type="email" id="Email_Pai" placeholder="Insira o E-mail">
+                                </div>
+                            <!--Fim da subclasse Contacto_Pai-->
 
-                        <!--Início da subclasse Contacto_Mae-->
-                            <div class="Contacto_Mae">
-                                <h2>Mãe</h2>
-                                <label>Telefone</label>
-                                <input type="text" id="Tel_Mãe" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
-                                
-                                <label>E-mail</label>
-                                <input type="email" id="Email_Mãe" placeholder="Insira o E-mail">
-                            </div>
-                        <!--Fim da subclasse Contacto_Mae-->
+                            <!--Início da subclasse Contacto_Mae-->
+                                <div class="Contacto_Mae">
+                                    <h2>Mãe</h2>
+                                    <label>Telefone</label>
+                                    <input type="text" id="Tel_Mãe" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
+                                    
+                                    <label>E-mail</label>
+                                    <input type="email" id="Email_Mãe" placeholder="Insira o E-mail">
+                                </div>
+                            <!--Fim da subclasse Contacto_Mae-->
 
 
-                        <!--Início da subclasse Contacto_Urgente-->
-                            <div class="Contacto_Urgente">
-                                <h2>Urgente</h2>
-                                <label>Telefone</label>
-                                <input type="text" id="Urgente" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
-                                
-                                <label>E-mail</label>
-                                <input type="email" id="Email_Urgente" placeholder="Insira o E-mail">
-                            </div>
-                        <!--Fim da subclasse Contacto_Urgente-->
+                            <!--Início da subclasse Contacto_Urgente-->
+                                <div class="Contacto_Urgente">
+                                    <h2>Urgente</h2>
+                                    <label>Telefone</label>
+                                    <input type="text" id="Urgente" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
+                                    
+                                    <label>E-mail</label>
+                                    <input type="email" id="Email_Urgente" placeholder="Insira o E-mail">
+                                </div>
+                            <!--Fim da subclasse Contacto_Urgente-->
 
-                        
+                            
+                            <button id="Anterior">Página Anterior</button>
+                            <button id="Seguinte">Próxima Página</button>
+                        </form>
+                    </div>
+                <!--Fim da classe Contactos-->
+
+                <!--Inicio da classe Pais-->
+                    <div class="Pais">
+                        <form>
+                            <h1>Pais</h1>
+                            <!--Inicio da subclasse Pais_Pai-->
+                                <div class="Pais_Pai">
+                                    <h2>Pai</h2>
+                                    <label>Nome</label>
+                                    <input type="text" id="Nome_Pai" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira o nome">
+                                    
+                                    <label>Idade</label>
+                                    <input type="text" id="Idade_Pai" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="3" placeholder="Insira a Idade">
+                                    
+                                    <label>Profissão</label>
+                                    <input type="text" id="Prof_Pai" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira a Profissão">
+                                    
+                                    <label>Altura</label>
+                                    <input type="text" id="Altura_Pai" pattern="[0-9]{1}m [0-9]{2}cm" maxlength="7" placeholder="Ex: 1m 75cm">
+                                </div>
+                            <!--Fim da subclasse Pais_Pai-->
+
+                            <!--Inicio da subclasse Pais_Mãe-->
+                                <div class="Pais_Mãe">
+                                    <h2>Mãe</h2>
+                                    <label>Nome</label>
+                                    <input type="text" id="Nome_Mãe" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira o nome">
+                                    
+                                    <label>Idade</label>
+                                    <input type="text" id="Idade_Mãe" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="3" placeholder="Insira a Idade">
+                                    
+                                    <label>Profissão</label>
+                                    <input type="text" id="Prof_Mãe" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira a Profissão">
+                                    
+                                    <label>Altura</label>
+                                    <input type="text" id="Altura_Mãe" pattern="[0-9]{1}m [0-9]{2}cm" maxlength="7" placeholder="Ex: 1m 60cm">
+                                </div>
+                            <!--Fim da subclasse Pais_Mãe-->
+
+                            <button id="Anterior">Página Anterior</button>
+                            <button id="Seguinte">Próxima Página</button>
+                        </form>
+                    </div>
+                <!--Fim da classe Pais-->
+
+                <!--Inicio da classe Observações-->
+                    <div class="Observacao">
+                        <h2>Observações</h2>
+                        <textarea id="Obs" placeholder="Exemplo: problemas de sáude"></textarea>
+
                         <button id="Anterior">Página Anterior</button>
-                        <button id="Seguinte">Próxima Página</button>
-                    </form>
-                </div>
-            <!--Fim da classe Contactos-->
-
-            <!--Inicio da classe Pais-->
-                <div class="Pais">
-                    <form>
-                        <h1>Pais</h1>
-                        <!--Inicio da subclasse Pais_Pai-->
-                            <div class="Pais_Pai">
-                                <h2>Pai</h2>
-                                <label>Nome</label>
-                                <input type="text" id="Nome_Pai" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira o nome">
-                                
-                                <label>Idade</label>
-                                <input type="text" id="Idade_Pai" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="3" placeholder="Insira a Idade">
-                                
-                                <label>Profissão</label>
-                                <input type="text" id="Prof_Pai" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira a Profissão">
-                                
-                                <label>Altura</label>
-                                <input type="text" id="Altura_Pai" pattern="[0-9]{1}m [0-9]{2}cm" maxlength="7" placeholder="Ex: 1m 75cm">
-                            </div>
-                        <!--Fim da subclasse Pais_Pai-->
-
-                        <!--Inicio da subclasse Pais_Mãe-->
-                            <div class="Pais_Mãe">
-                                <h2>Mãe</h2>
-                                <label>Nome</label>
-                                <input type="text" id="Nome_Mãe" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira o nome">
-                                
-                                <label>Idade</label>
-                                <input type="text" id="Idade_Mãe" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="3" placeholder="Insira a Idade">
-                                
-                                <label>Profissão</label>
-                                <input type="text" id="Prof_Mãe" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira a Profissão">
-                                
-                                <label>Altura</label>
-                                <input type="text" id="Altura_Mãe" pattern="[0-9]{1}m [0-9]{2}cm" maxlength="7" placeholder="Ex: 1m 60cm">
-                            </div>
-                        <!--Fim da subclasse Pais_Mãe-->
-
-                        <button id="Anterior">Página Anterior</button>
-                        <button id="Seguinte">Próxima Página</button>
-                    </form>
-                </div>
-            <!--Fim da classe Pais-->
-
-            <!--Inicio da classe Observações-->
-                <div class="Observacao">
-                    <h2>Observações</h2>
-                    <textarea id="Obs" placeholder="Exemplo: problemas de sáude"></textarea>
-
-                    <button id="Anterior">Página Anterior</button>
-                    <button type="submit" id="Enviar">Enviar</button>
-                </div>
-            <!--Fim da classe Observações-->
+                        <button type="submit" id="Enviar">Enviar</button>
+                    </div>
+                <!--Fim da classe Observações-->
+            </div>
         </div>
         <script src="app.js"></script>
     </body>

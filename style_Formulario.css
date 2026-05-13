@@ -1,6 +1,45 @@
 *{
-    
+    border: 1px solid red;
     margin: 0;/*Serve para deixar sem margem*/
     padding: 0;/*Serve para deixar sem interior*/
     box-sizing: border-box;/*Serve para definir o tamanho total de um elemento (largura e altura)*/
 }
+
+body{
+    display: flex;/*Deixa os intens lado a lado na mesma linha*/
+    justify-content: center;/*Alinha os itens no eixo do x*/
+    align-items: center;/*Alinha os itens no eixo do x*/
+    margin: 0px 2%;
+    min-height: 100vh; /*server para ver a tela toda*/
+    background-color: #1C1C1A;
+}
+/*Inicio Da Classe main_Form*/
+    .main_Form{
+        display: flex;
+        position: relative;
+        border-radius: 20px;/*Deixa a borda redonda*/
+        background-color: white;
+        width: 80%;
+        height: 80%;
+        overflow: hidden;/*Serve para esconder os itens quando eles passarem da margem do bloco*/
+    }
+
+    /*Inicio Da Classe main_Form_Esquerda*/
+        .main_Form_Esquerda{
+            flex: 0.9;
+            height: 100%;
+            overflow: hidden;
+        }
+        .Main_Form_Esquerda img{
+            width: 50%;
+        }
+    /*Fim Da Classe Main_Form_Esquerda*/
+
+
+    /*Inicio Da Classe main_Form_Direita*/
+        .main_Form_Direita{
+            flex: 2;
+            justify-content: right;
+        }
+    /*Fim Da Classe main_Direita*/
+/*Fim Da Classe main_Form*/
