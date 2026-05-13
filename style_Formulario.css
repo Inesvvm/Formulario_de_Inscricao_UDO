@@ -46,8 +46,23 @@ body{
             width: 100%;
         }
 
+        .main_Form_Direita button{
+                border: 2px solid red;
+                border-radius: 20px;
+                background-color: #ffffff;
+                color: red;
+                margin: 5px;
+                padding: 10px;
+                transition: 0.5s;
+            }
+
+            .main_Form_Direita button:hover{
+                background-color: red;
+                color: white;
+            }
         /*Inicio da subclasse Dados_Pesoais*/
             .Dados_Pesoais{
+                display: none;
                 flex-direction: row;
                 width: 100%;
                 height: 100%;
@@ -101,34 +116,208 @@ body{
                 }
             /*Fim da Configuração das subclasses Morada_Localidade*/
 
+            /*Inicio da Configuração Cod_Postal*/
+                .Cod_Postal{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+                    margin-right: 30px;
+                }
+                .Input1 {
+                    display: flex;
+                    justify-self: center;
+                }
+            /*Fim da Configuração Cod_Postal*/
 
-            .Cod_Postal{
-                display: flex;
-                justify-content: center;
-                margin-top: 15px;
-            }
-            .Input1 {
+            .Dados_Pesoais button{
                 display: flex;
                 justify-self: center;
+                border: 2px solid red;
+                border-radius: 20px;
+                background-color: #ffffff;
+                color: red;
+                margin-top: 20px;
+                margin-left: -5%;
+                padding: 10px;
+                transition: 0.5s;
             }
 
+            .Dados_Pesoais button:hover{
+                background-color: red;
+                color: white;
+            }
         /*Fim da subclasse Dados_Pesoais*/
 
         /*Inicio da subclasse Contactos*/
             .Contactos{
                 display: none;
+                flex-direction: row;/*Alinha na horizotal*/
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                overflow: hidden;
+                margin: 20px 
+            }
+
+            .Contactos h1{
+                font-size: 40px;
+                justify-content: center;/*Alinha no eixo do x*/
+                text-align: center;/*Alinha no eixo do y*/
+            }
+
+            .Contactos h2{
+                font-size: 30px;
+            }
+
+            .Contactos label{
+                font-size: 20px;
+            }
+
+            .Contactos input{
+                background-color: rgb(230, 228, 228);
+                border: none;
+                border-radius: 10px;
+                outline: none;
+                width: 45%;
+                height: 6%;
+                padding: 10px;
+                margin-right: 25px;
+                margin-bottom: 5px;
+                font-size: 15px;
+            }
+
+            .Proprio_Tel_Email{
+                display: flex;
+                gap: 39%;
+            }
+
+            .Pai_Tel_Email{
+                display: flex;
+                gap: 40%;
+            }
+            
+            .Mae_Tel_Email{
+                display: flex;
+                gap: 40%;
+            }
+
+            .Urgente{
+                display: flex;
+                gap: 40%;
+            }
+            
+            .butoes{
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+                margin-left: -5%;
             }
         /*Fim da subclasse Contactos*/
 
         /*Inicio da subclasse Pais*/
             .Pais{
                 display: none;
+                flex-direction: row;/*Alinha na horizotal*/
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                overflow: hidden;
+                margin: 20px 
+            }
+
+            .Pais h1{
+                font-size: 40px;
+                justify-content: center;/*Alinha no eixo do x*/
+                text-align: center;/*Alinha no eixo do y*/
+                margin-left: -5%;
+            }
+            
+            .Pais h2{
+                font-size: 30px;
+            }
+
+            .Pais label{
+                font-size: 20px;
+            }
+
+            .Pais input{
+                background-color: rgb(230, 228, 228);
+                border: none;
+                border-radius: 10px;
+                outline: none;
+                width: 45%;
+                height: 6%;
+                padding: 10px;
+                margin-right: 25px;
+                margin-bottom: 5px;
+                font-size: 15px;
+            }
+
+            .Pai_cima{
+                display: flex;
+                gap: 42%; 
+            }
+
+            .Pai_Baixo{
+                display: flex;
+                gap: 38%; 
+            }
+
+            .Mae_Cima{
+                display: flex;
+                gap: 42%; 
+            }
+
+            .Mae_Baixo{
+                display: flex;
+                gap: 38%; 
+            }
+
+            .butoes{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                margin-left: -10%;
             }
         /*Fim da subclasse Pais*/
 
         /*Inicio da subclasse Observacao*/
             .Observacao{
-                display: none;
+                display: block;
+                flex-direction: row;/*Alinha na horizotal*/
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                overflow: hidden;
+                margin: 20px 
+            }
+
+            .Observacao h1{
+                font-size: 40px;
+                justify-content: center;/*Alinha no eixo do x*/
+                text-align: center;/*Alinha no eixo do y*/
+                margin-left: -5%;
+                margin-bottom: 20px;
+            }
+
+            .Observacao label{
+                font-size: 20px;
+            }
+            .Observacao textarea{
+                background-color: rgb(230, 228, 228);
+                padding: 5px 10px;
+                outline: none;
+                margin: 20px;
+                width: 90%;
+                height: 50%;
+                resize: none;
+            }
+
+            .butoes{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                margin-left: -5%;
             }
         /*Fim da subclasse Observacao*/
         
