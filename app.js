@@ -9,37 +9,46 @@ function Verifica1(){
 const Nome=document.getElementById("nome");
 const Data=document.getElementById("data_Nascimento");
 const Contribuinte=document.getElementById("NIF");
+const Cartao_Cidadao=document.getElementById("BI_CC");
 
-    Nome.setCustomValidity(""); 
+    
         if(!Nome.checkValidity()){
-            Nome.style.border="2px solid red";
             if(Nome.validity.valueMissing){
+                Nome.style.border="2px solid red";
                 Nome.setCustomValidity("Tem de inserir um nome");
                 Nome.reportValidity();
                 return false;
             }if(Nome.validity.tooShort){
+                Nome.style.border="2px solid red";
                 Nome.setCustomValidity("Tem de ter no minimo 3 letras");
                 return false;
             }
 
         }if(!Data.checkValidity()){
-            Data.style.border="2px solid red";
             if(Data.validity.valueMissing){
+                Data.style.border="2px solid red";
                 Data.setCustomValidity("Tem de Inserir uma data");
+                return false;
             }if(Data.validity.patternMismatch){
+                Data.style.border="2px solid red";
                 Data.setCustomValidity("Tem de serguir opadrão recomendado");
+                return false;
             }
-            
-        }if(Contribuinte.checkValidity()){
-            Contribuinte.style.border="2px solid red";
-            if(Contribuinte.valueMissing){
+
+        }if(!Contribuinte.checkValidity()){
+            if(Contribuinte.validity.valueMissing){
+                Contribuinte.style.border="2px solid red";
                 Contribuinte.checkValidity("Tem de Inserir o numero do contribuinte");
                 Contribuinte.reportValidity();
                 return false;
             }
+        }if(Cartao_Cidadao.checkValidity){
+            if(Cartao_Cidadao.valueMissing){
+                Cartao_Cidadao.style.border="2px solid red";
+                C
+            }
         }
-    
-                return true;
+        return true;
 }
 //Inicio Fucção que vai para a página seguinte
     function Proxima_Pag(){
