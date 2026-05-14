@@ -23,12 +23,12 @@
                                 </div>   
 
                                     <!--Nome-->
-                                    <input type="text" id="nome" oninput="this.value=this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');"  placeholder="Insira o seu Nome">
+                                    <input type="text" id="nome" oninput="this.value=this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');"  required  maxlength="150" placeholder="Insira um Nome">
                                     <!--O placehoder serve para escrever dentro do Input o oniput serve para aceitar apaenas letras neste campo-->
                                     
                                     <!--Data-->
-                                    <input type="text" id="data_Nascimento" inputmode="numeric" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" maxlength="10" placeholder="Ex: dd/mm/aaaa">
-                                    <!--O input mode serve para que no telémovel apareça somente números, o pattern é forma que se vai escrever, o oninput só deixa colocar números e o maxlength só deixa colocar 10 numeros-->
+                                    <input type="date" id="data_Nascimento">
+                                    
                             <!--Fim da classe Nome_Data e Inputs correspondentes-->
                             
                             
@@ -68,7 +68,7 @@
                                 </div>
                             <!--Fim da classe Cod_Postal_e_Input-->
 
-                             <button type="button" id="Seguinte" class="StyleButao" onclick="Proxima_Pag(); Verifica1()">Próxima Página</button><!--Chama as funções Proxima paginah e Verifica1 e o type buton evita que a página renicie-->
+                             <button type="button" id="Seguinte" class="StyleButao" onclick="Verifica1();Proxima_Pag() ">Próxima Página</button><!--Chama as funções Proxima paginah e Verifica1 e o type buton evita que a página renicie-->
                         </form>
                     </div>
                 <!--Fim da classe dados pessoais-->
