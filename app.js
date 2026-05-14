@@ -1,34 +1,63 @@
-function enviar(){
-    const Nomes= document.getElementById("Nome"); // cria uma constante e vai pegar o elemento Nome do formulário
-    const Endereco_Email= document.getElementById("Email");
-    var Idades=document.getElementById("Idade");
-    var Telefone=document.getElementById("Telemovel");
+const Primeira_Pag=document.getElementById("Pag_1");//Busca o Elemeto com o Id Pag_1
+const Segunda_Pag=document.getElementById("Pag_2");//Busca o Elemeto com o Id Pag_2
+const Terceira_Pag=document.getElementById("Pag_3");//Busca o Elemeto com o Id Pag_3
+const Quarta_Pag=document.getElementById("Pag_4");//Busca o Elemeto com o Id Pag_4
+let i=1;
 
-    if(Nomes.value.trim()==="")//.value.trim() serve para que os campos não fiquem vazios mesmo co o espaço
-        alert("Tem de prencher o campo Nome!");
+//Inicio Fucção que vai para a página seguinte
+    function Proxima_Pag(){
+        i++;
+        if(i==1){
+            Primeira_Pag.style.display='block';//Faz que a 1ª Pagina fique visivel
+            Segunda_Pag.style.display='none';//Faz que a 2ª Pagina fique escondida
+            Terceira_Pag.style.display='none';//Faz que a 3ª Pagina fique escondida
+            Quarta_Pag.style.display='none';//Faz que a 4ª Pagina fique escondida
 
-    else if(Nomes.value.length<3)// verifia se o Nome tem no minimo 3 letras.
-        alert("O campo Nome tem de ter no minímo 3 letras!");
+        }else if(i==2){
+            Primeira_Pag.style.display='none';//Faz que a 1ª Pagina fique escondida
+            Segunda_Pag.style.display='block';//Faz que a 2ª Pagina fique visivel
+            Terceira_Pag.style.display='none';//Faz que a 3ª Pagina fique escondida
+            Quarta_Pag.style.display='none';//Faz que a 4ª Pagina fique escondida
+        }else if(i==3){
+            Primeira_Pag.style.display='none';//Faz que a 1ª Pagina fique escondida
+            Segunda_Pag.style.display='none';//Faz que a 2ª Pagina fique escondida
+            Terceira_Pag.style.display='block';//Faz que a 3ª Pagina fique visivel
+            Quarta_Pag.style.display='none';//Faz que a 4ª Pagina fique escondida
+        }else if(i==4){
+            Primeira_Pag.style.display='none';//Faz que a 1ª Pagina fique escondida
+            Segunda_Pag.style.display='none';//Faz que a 2ª Pagina fique escondida
+            Terceira_Pag.style.display='none';//Faz que a 3ª Pagina fique escondida
+            Quarta_Pag.style.display='block';//Faz que a 4ª Pagina fique visivel
+        }
 
-    else if(Endereco_Email.value.trim()==="")//verifica se o campo não está vazio
-        alert("Tem de preencher o campo do email!");
+    }
+//Inicio Fucção que vai para a página seguinte
 
-    else if(!Endereco_Email.value.includes('@') || !Endereco_Email.value.endsWith('gmail.com'))//verifica se campo o tem @ e termina com gmail.com
-        alert("Tem de ser um email!");
-    
-    else if(Idades.value === "")
-        alert("Tem de preencher o campo idade!");//verifica se o campo não está vazio
-    
-    else if(Idades.value<4 || Idades.value>100)//verifica se o a idade é valida
-        alert("Tem de inserir uma idade válida!");
+//Inicio Fucção que vai para a página anterior
+function Pag_Anterior(){
+    i--;
+    if(i==1){
+        Primeira_Pag.style.display='block';//Faz que a 1ª Pagina fique visivel
+        Segunda_Pag.style.display='none';//Faz que a 2ª Pagina fique escondida
+        Terceira_Pag.style.display='none';//Faz que a 3ª Pagina fique escondida
+        Quarta_Pag.style.display='none';//Faz que a 4ª Pagina fique escondida
 
-    else if(Telefone.value==="")//verifica se o campo não está vazio
-        alert("Tem de preencher o campo Telefone!");
-
-    else if(Telefone.value.length <9)//verifica se o campo tem 9 digitos
-        alert("Tem de ter nove digitos!");
-
-    else
-        alert("Formulário enviado com sucesso!");
-
+    }else if(i==2){
+        Primeira_Pag.style.display='none';//Faz que a 1ª Pagina fique escondida
+        Segunda_Pag.style.display='block';;//Faz que a 2ª Pagina fique visivel
+        Terceira_Pag.style.display='none';//Faz que a 3ª Pagina fique escondida
+        Quarta_Pag.style.display='none';//Faz que a 4ª Pagina fique escondida
+    }else if(i==3){
+        Primeira_Pag.style.display='none';//Faz que a 1ª Pagina fique escondida
+        Segunda_Pag.style.display='none';//Faz que a 2ª Pagina fique escondida
+        Terceira_Pag.style.display='block';;//Faz que a 3ª Pagina fique visivel
+        Quarta_Pag.style.display='none';//Faz que a 4ª Pagina fique escondida
+    }else if(i==4){
+        Primeira_Pag.style.display='none';//Faz que a 1ª Pagina fique escondida
+        Segunda_Pag.style.display='none';//Faz que a 2ª Pagina fique escondida
+        Terceira_Pag.style.display='none';//Faz que a 3ª Pagina fique escondida
+        Quarta_Pag.style.display='block';;//Faz que a 4ª Pagina fique visivel
+    }
 }
+//Fim Funcção que vai para a página seguinte
+
