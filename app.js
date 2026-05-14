@@ -21,14 +21,24 @@ const Contribuinte=document.getElementById("NIF");
                 Nome.setCustomValidity("Tem de ter no minimo 3 letras");
                 return false;
             }
+
+        }if(!Data.checkValidity()){
+            Data.style.border="2px solid red";
+            if(Data.validity.valueMissing){
+                Data.setCustomValidity("Tem de Inserir uma data");
+            }if(Data.validity.patternMismatch){
+                Data.setCustomValidity("Tem de serguir opadrão recomendado");
+            }
+            
         }if(Contribuinte.checkValidity()){
             Contribuinte.style.border="2px solid red";
             if(Contribuinte.valueMissing){
                 Contribuinte.checkValidity("Tem de Inserir o numero do contribuinte");
-                Nome.reportValidity();
+                Contribuinte.reportValidity();
                 return false;
             }
         }
+    
                 return true;
 }
 //Inicio Fucção que vai para a página seguinte
