@@ -16,7 +16,7 @@ body{
 /*Inicio Da Classe main_Form*/
     .main_Form{
         display: flex;
-        position: relative;
+        position: relative;/*Serve para deixar os itens de forma relativa*/
         border-radius: 20px;/*Deixa a borda redonda*/
         background-color: white;
         width: 80%;
@@ -76,6 +76,7 @@ body{
                 justify-content: center;
                 text-align: center;
                 padding: 10px;
+                margin-right: 8%;
             }
 
             .Dados_Pesoais h2{
@@ -163,10 +164,12 @@ body{
                 font-size: 40px;
                 justify-content: center;/*Alinha no eixo do x*/
                 text-align: center;/*Alinha no eixo do y*/
+                margin-right: 8%;
+                margin-bottom: 5px;
             }
 
             .Contactos h2{
-                font-size: 30px;
+                font-size: 25px;
             }
 
             .Contactos label{
@@ -186,33 +189,43 @@ body{
                 font-size: 15px;
             }
 
-            .Proprio_Tel_Email{
-                display: flex;
-                gap: 39%;
-            }
+            /*Inico da Configuração das subclasse Proprio_Tel_Email*/
+                .Proprio_Tel_Email{
+                    display: flex;
+                    gap: 39%;
+                }
+            /*Fim da Configuração das subclasse Proprio_Tel_Email*/
 
-            .Pai_Tel_Email{
-                display: flex;
-                gap: 40%;
-            }
-            
-            .Mae_Tel_Email{
-                display: flex;
-                gap: 40%;
-            }
+            /*Inico da Configuração das subclasse Pai_Tel_Email*/
+                .Pai_Tel_Email{
+                    display: flex;
+                    gap: 39%;
+                }
+            /*Fim da Configuração das subclasse Pai_Tel_Email*/
 
-            .Urgente{
-                display: flex;
-                gap: 40%;
-            }
-            
+            /*Inico da Configuração das subclasse Mae_Tel_Email*/
+                .Mae_Tel_Email{
+                    display: flex;
+                    gap: 39%;
+                }
+            /*Fim da Configuração das subclasse Mae_Tel_Email*/
+
+            /*Inico da Configuração das subclasse Urgente*/
+                .Urgente{
+                    display: flex;
+                    gap: 39%;
+                }
+            /*Fim da Configuração das subclasse Urgente*/
+
             .butoes{
                 display: flex;
                 justify-content: center;
-                margin-top: 10px;
-                margin-left: -5%;
+                margin-top: 20px;
+                margin-right: 7%;
             }
         /*Fim da subclasse Contactos*/
+
+
 
         /*Inicio da subclasse Pais*/
             .Pais{
@@ -229,7 +242,8 @@ body{
                 font-size: 40px;
                 justify-content: center;/*Alinha no eixo do x*/
                 text-align: center;/*Alinha no eixo do y*/
-                margin-left: -5%;
+                margin-left: -7%;
+                margin-bottom: 1%;
             }
             
             .Pais h2{
@@ -253,33 +267,45 @@ body{
                 font-size: 15px;
             }
 
-            .Pai_cima{
-                display: flex;
-                gap: 42%; 
-            }
+            /*Inico da Configuração das subclasse Pai_cima*/
+                .Pai_cima{
+                    display: flex;
+                    gap: 42%; 
+                }
+            /*Fim da Configuração das subclasse Pai_cima*/
 
-            .Pai_Baixo{
-                display: flex;
-                gap: 38%; 
-            }
+            /*Inico da Configuração das subclasse Pai_Baixo*/
+                .Pai_Baixo{
+                    display: flex;
+                    gap: 38%; 
+                }
+            /*Fim da Configuração das subclasse Pai_Baixo*/
 
-            .Mae_Cima{
-                display: flex;
-                gap: 42%; 
-            }
+            /*Inico da Configuração das subclasse Mae_Cima*/
+                .Mae_Cima{
+                    display: flex;
+                    gap: 42%; 
+                }
+            /*Fim da Configuração das subclasse Mae_Cima*/
 
-            .Mae_Baixo{
-                display: flex;
-                gap: 38%; 
-            }
+            /*Inico da Configuração das subclasse Mae_Baixo*/
+                .Mae_Baixo{
+                    display: flex;
+                    gap: 38%; 
+                }
+            /*Fim da Configuração das subclasse Mae_Baixo*/
 
             .butoes{
                 display: flex;
                 justify-content: center;
                 margin-top: 20px;
-                margin-left: -10%;
+                margin-right: 4%;
             }
+
         /*Fim da subclasse Pais*/
+
+
+
 
         /*Inicio da subclasse Observacao*/
             .Observacao{

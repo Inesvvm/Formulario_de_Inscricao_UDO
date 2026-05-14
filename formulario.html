@@ -29,7 +29,7 @@
                                     <!--Data-->
                                     <input type="text" id="data_Nascimento" inputmode="numeric" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" maxlength="10" placeholder="Ex: dd/mm/aaaa">
                                     <!--O input mode serve para que no telémovel apareça somente números, o pattern é forma que se vai escrever, o oninput só deixa colocar números e o maxlength só deixa colocar 10 numeros-->
-                            <!--Inicio da classe Nome_Data e Inputs correspondentes-->
+                            <!--Fim da classe Nome_Data e Inputs correspondentes-->
                             
                             
                             <!--Inicio da classe Contribuinte_Cartao e Inputs correspondentes-->
@@ -59,12 +59,14 @@
                                 <input type="text" id="localidade" placeholder="Insira a sua Localidade">
                             <!--Fim da classe Morada_Localidade e Inputs correspondentes-->
 
-                            <div class="Cod_Postal_e_Input">
-                                <div class="Cod_Postal">
-                                    <h2>Código Postal</h2>
+                            <!--Inicio da classe Cod_Postal_e_Input-->
+                                <div class="Cod_Postal_e_Input">
+                                    <div class="Cod_Postal">
+                                        <h2>Código Postal</h2>
+                                    </div>
+                                    <input class="Input1" type="text" id="codigo_Postal" pattern="[0-9]{4}-[0-9]{3}" inputmode="numeric" maxlength="8" placeholder="Ex: XXXX-YYY">
                                 </div>
-                                <input class="Input1" type="text" id="codigo_Postal" pattern="[0-9]{4}-[0-9]{3}" inputmode="numeric" maxlength="8" placeholder="Ex: XXXX-YYY">
-                            </div>
+                            <!--Fim da classe Cod_Postal_e_Input-->
 
                              <button id="Seguinte" class="StyleButao">Próxima Página</button>
                         </form>
@@ -82,8 +84,9 @@
                                         <label>Telefone</label>
                                         <label>E-mail</label>
                                     </div>
-                                    
+                                     <!--Tel-->
                                     <input type="text" id="Tel" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
+                                     <!--email-->
                                     <input type="email" id="Email" placeholder="Insira E-mail">
                                 </div>
                             <!--Fim da subclasse Contacto_Próprio-->
@@ -126,16 +129,19 @@
                                         <label>E-mail</label>
                                     </div>
 
+                                    <!--Tel-->
                                     <input type="text" id="Urgente" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="9" placeholder="Insira o Nº Telefone">
-                                    
+                                    <!--email-->
                                     <input type="email" id="Email_Urgente" placeholder="Insira o E-mail">
                                 </div>
                             <!--Fim da subclasse Contacto_Urgente-->
 
-                            <div class="butoes">
-                                <button class="Anterior" id="Anterior">Página Anterior</button>
-                                <button class="Seguinte" id="Seguinte">Próxima Página</button>
-                            </div>
+                            <!--Inicio da subclasse butoes-->
+                                <div class="butoes">
+                                    <button class="Anterior" id="Anterior">Página Anterior</button>
+                                    <button class="Seguinte" id="Seguinte">Próxima Página</button>
+                                </div>
+                            <!--Inicio da subclasse butoes-->
                         </form>
                     </div>
                 <!--Fim da classe Contactos-->
@@ -147,54 +153,63 @@
                             <!--Inicio da subclasse Pais_Pai-->
                                 <div class="Pais_Pai">
                                     <h2>Pai</h2>
-                                    <div class="Pai_cima">
-                                        <label>Nome</label>
-                                        <label>Idade</label>
-                                    </div>
-                                    
-                                    <div class="Pai_cima_Input">
+                                    <!--Inicio da Subclasse Pai_cima para ficarem na parte superior -->
+                                        <div class="Pai_cima">
+                                            <label>Nome</label>
+                                            <label>Idade</label>
+                                        </div>
+                                        
+                                        
                                         <input type="text" id="Nome_Pai" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira o nome">
                                         <input type="text" id="Idade_Pai" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="3" placeholder="Insira a Idade">
-                                    </div>
-
-                                    <div class="Pai_Baixo">
-                                        <label>Profissão</label>
-                                        <label>Altura</label>
-                                    </div>
+                                        
+                                    <!--Fim das Subclasses Pai_cima para ficarem na parte superior -->
                                     
-                                    <div class="Pai_cima_Input">
+                                    <!--Inicio das Subclasse Pai_Baixo para ficarem na parte inferior -->
+                                        <div class="Pai_Baixo">
+                                            <label>Profissão</label>
+                                            <label>Altura</label>
+                                        </div>
+                                        
+                                        
                                         <input type="text" id="Prof_Pai" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira a Profissão">
                                         <input type="text" id="Altura_Pai" pattern="[0-9]{1}m [0-9]{2}cm" maxlength="7" placeholder="Ex: 1m 75cm">
-                                    </div>
-                                    </div>
+                                    <!--Fim das Subclasses Pai_Baixo para ficarem na parte inferior -->
+                                </div>
                             <!--Fim da subclasse Pais_Pai-->
 
                             <!--Inicio da subclasse Pais_Mãe-->
                                 <div class="Pais_Mãe">
                                     <h2>Mãe</h2>
-                                    <div class="Mae_cima">
-                                        <label>Nome</label>
-                                        <label>Idade</label>
-                                    </div>
-                                    
-                                    <input type="text" id="Nome_Mãe" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira o nome">
-                                    <input type="text" id="Idade_Mãe" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="3" placeholder="Insira a Idade">
-                                    
+                                    <!--Inicio da Subclasse Mae_cima para ficarem na parte superior -->
+                                        <div class="Mae_cima">
+                                            <label>Nome</label>
+                                            <label>Idade</label>
+                                        </div>
+                                        
+                                        <input type="text" id="Nome_Mãe" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira o nome">
+                                        <input type="text" id="Idade_Mãe" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1')" maxlength="3" placeholder="Insira a Idade">
+                                    <!--Fim da Subclasse Mae_cima para ficarem na parte superior -->    
 
-                                    <div class="Mae_Baixo">
-                                        <label>Profissão</label>
-                                        <label>Altura</label>
-                                    </div>
+                                    <!--Inicio da Subclasse Mae_Baixo para ficarem na parte inferior -->
+                                        <div class="Mae_Baixo">
+                                            <label>Profissão</label>
+                                            <label>Altura</label>
+                                        </div>
                                     
-                                    <input type="text" id="Prof_Mãe" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira a Profissão">
-                                    <input type="text" id="Altura_Mãe" pattern="[0-9]{1}m [0-9]{2}cm" maxlength="7" placeholder="Ex: 1m 60cm">
+                                        <input type="text" id="Prof_Mãe" oninput="this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');" placeholder="Insira a Profissão">
+                                        <input type="text" id="Altura_Mãe" pattern="[0-9]{1}m [0-9]{2}cm" maxlength="7" placeholder="Ex: 1m 60cm">
+                                    <!--Fim da Subclasse Mae_Baixo para ficarem na parte inferior -->
+                                
                                 </div>
                             <!--Fim da subclasse Pais_Mãe-->
 
-                            <div class="butoes">
-                                <button class="Anterior" id="Anterior">Página Anterior</button>
-                                <button class="Seguinte" id="Seguinte">Próxima Página</button>
-                            </div>
+                            <!--Inicio da subclasse butoes-->
+                                <div class="butoes">
+                                    <button class="Anterior" id="Anterior">Página Anterior</button>
+                                    <button class="Seguinte" id="Seguinte">Próxima Página</button>
+                                </div>
+                            <!--Fim da subclasse butoes-->
                         </form>
                     </div>
                 <!--Fim da classe Pais-->
@@ -207,10 +222,12 @@
                         </div>
                         <textarea id="Obs" placeholder="Insira aqui as Observações que deseja fazer"></textarea>
 
-                        <div class="butoes">
-                            <button class="Anterior" id="Anterior">Página Anterior</button>
-                            <button class="Envia" type="submit" id="Enviar">Enviar</button>
-                        </div>
+                        <!--Inicio da subclasse butoes-->
+                            <div class="butoes">
+                                <button class="Anterior" id="Anterior">Página Anterior</button>
+                                <button class="Envia" type="submit" id="Enviar">Enviar</button>
+                            </div>
+                        <!--Inicio da subclasse butoes-->
                     </div>
                 <!--Fim da classe Observações-->
             </div>
