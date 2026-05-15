@@ -12,9 +12,9 @@
                 <img src="UDO_Basketball.jpg" alt="UDO_Basketball">
             </div>
             <div class="main_Form_Direita">
-                <!--Inicio da classe dados pessoais-->
-                    <div class="Dados_Pesoais Paginas" id="Pag_1"><!--Chama duas classes a Dados_Pesoais e Paginas-->
-                        <form>
+                <form name="Form_UDO">
+                    <!--Inicio da classe dados pessoais-->
+                        <div class="Dados_Pesoais Paginas" id="Pag_1"><!--Chama duas classes a Dados_Pesoais e Paginas-->
                             <h1>Dados pessoais</h1> 
                             <!--Inicio da classe Nome_Data e Inputs correspondentes-->
                                 <div class="Nome_Data">
@@ -38,11 +38,11 @@
                                 </div>
                             
                                 <!--Contribuinte-->
-                                <input type="text" id="NIF" inputmode="numeric" maxlength="9" placeholder="Ex: 123456789">
+                                <input type="text" id="NIF" placeholder="Ex: 123456789">
                                 <!--O input mode serve para que no telémovel apareça somente números e o maxlength só deixa colocar 9 numeros-->
                                 
                                 <!--BI_CC-->
-                                <input type="text" id="BI_CC" pattern="[0-9]{8} [0-9]{1} [A-Z]{2}[0-9]{1}" maxlength="14" placeholder="Ex: 12345678 9 AB0">
+                                <input type="text" id="BI_CC" placeholder="Ex: 12345678 9 AB0">
                                 <!--O pattern serve para seguir um formato expecífico sendo que o [0-9]/[A-Z] é os digitos que são permitidos e o {9}/{2}/{1} é a quantidade desses valores que podem ser inseridos-->
                             <!--Fim da classe Contribuinte_Cartao e Inputs correspondentes-->
 
@@ -63,18 +63,16 @@
                                     <div class="Cod_Postal">
                                         <h2>Código Postal</h2>
                                     </div>
-                                    <input class="Input1" type="text" id="codigo_Postal" pattern="[0-9]{4}-[0-9]{3}" inputmode="numeric" maxlength="8" placeholder="Ex: XXXX-YYY">
+                                    <input class="Input1" type="text" id="codigo_Postal" placeholder="Ex: XXXX-YYY">
                                 </div>
                             <!--Fim da classe Cod_Postal_e_Input-->
 
-                             <button type="button" class="butoes Seguinte" onclick="Proxima_Pag() ">Próxima Página</button><!--Chama as funções Proxima paginah e Verifica1 e o type buton evita que a página renicie-->
-                        </form>
+                                <button type="button" class="butoes Seguinte" onclick="Proxima_Pag() ">Próxima Página</button><!--Chama as funções Proxima paginah e Verifica1 e o type buton evita que a página renicie-->
                     </div>
-                <!--Fim da classe dados pessoais-->
+                    <!--Fim da classe dados pessoais-->
 
-                <!--Inicio da classe Contactos-->
-                    <div class="Contactos Paginas" id="Pag_2"><!--Chama duas classes a Contactos e Paginas-->
-                        <form>
+                    <!--Inicio da classe Contactos-->
+                        <div class="Contactos Paginas" id="Pag_2"><!--Chama duas classes a Contactos e Paginas-->
                             <h1>Contactos</h1>
                             <!--Início da subclasse Contacto_Próprio-->
                                 <div class="Proprio">
@@ -83,9 +81,9 @@
                                         <label>Telefone</label>
                                         <label>E-mail</label>
                                     </div>
-                                     <!--Tel-->
-                                    <input type="text" id="Tel" maxlength="9" placeholder="Insira o Nº Telefone">
-                                     <!--email-->
+                                        <!--Tel-->
+                                    <input type="text" id="Tel" placeholder="Insira o Nº Telefone">
+                                        <!--email-->
                                     <input type="email" id="Email" placeholder="Insira E-mail">
                                 </div>
                             <!--Fim da subclasse Contacto_Próprio-->
@@ -97,9 +95,9 @@
                                         <label>Telefone</label>
                                         <label>E-mail</label>
                                     </div>
-                                   
+                                    
                                     <!--Tel-->
-                                    <input type="text" id="Tel_Pai" maxlength="9" placeholder="Insira o Nº Telefone">
+                                    <input type="text" id="Tel_Pai" placeholder="Insira o Nº Telefone">
                                     <!--Email-->
                                     <input type="email" id="Email_Pai" placeholder="Insira o E-mail">
                                 </div>
@@ -113,7 +111,7 @@
                                         <label>E-mail</label>
                                     </div>
                                     <!--Tel-->
-                                    <input type="text" id="Tel_Mae" inputmode="numeric" maxlength="9" placeholder="Insira o Nº Telefone">
+                                    <input type="text" id="Tel_Mae" placeholder="Insira o Nº Telefone">
                                     <!--email-->
                                     <input type="email" id="Email_Mae" placeholder="Insira o E-mail">
                                 </div>
@@ -129,7 +127,7 @@
                                     </div>
 
                                     <!--Tel-->
-                                    <input type="text" id="Urgente" inputmode="numeric" maxlength="9" placeholder="Insira o Nº Telefone">
+                                    <input type="text" id="Urgente" placeholder="Insira o Nº Telefone">
                                     <!--email-->
                                     <input type="email" id="Email_Urgente" placeholder="Insira o E-mail">
                                 </div>
@@ -141,13 +139,11 @@
                                     <button type="button" class="Seguinte"  onclick="Proxima_Pag()">Próxima Página</button>
                                 </div>
                             <!--Inicio da subclasse butoes-->
-                        </form>
                     </div>
-                <!--Fim da classe Contactos-->
+                    <!--Fim da classe Contactos-->
 
-                <!--Inicio da classe Pais-->
-                    <div class="Pais Paginas" id="Pag_3"><!--Chama duas classes a Pais e Paginas-->
-                        <form>
+                    <!--Inicio da classe Pais-->
+                        <div class="Pais Paginas" id="Pag_3"><!--Chama duas classes a Pais e Paginas-->
                             <h1>Pais</h1>
                             <!--Inicio da subclasse Pais_Pai-->
                                 <div class="Pais_Pai">
@@ -159,8 +155,8 @@
                                         </div>
                                         
                                         
-                                        <input type="text" id="Nome_Pai" placeholder="Insira o nome">
-                                        <input type="text" id="Idade_Pai" inputmode="numeric" maxlength="3" placeholder="Insira a Idade">
+                                        <input type="text" id="Nome_Pai"  placeholder="Insira o nome">
+                                        <input type="text" id="Idade_Pai" placeholder="Insira a Idade">
                                         
                                     <!--Fim das Subclasses Pai_cima para ficarem na parte superior -->
                                     
@@ -172,7 +168,7 @@
                                         
                                         
                                         <input type="text" id="Prof_Pai" placeholder="Insira a Profissão">
-                                        <input type="text" id="Altura_Pai" pattern="[0-9]{1}m [0-9]{2}cm" maxlength="7" placeholder="Ex: 1m 75cm">
+                                        <input type="text" id="Altura_Pai" placeholder="Ex: 1m 75cm">
                                     <!--Fim das Subclasses Pai_Baixo para ficarem na parte inferior -->
                                 </div>
                             <!--Fim da subclasse Pais_Pai-->
@@ -187,7 +183,7 @@
                                         </div>
                                         
                                         <input type="text" id="Nome_Mae"  placeholder="Insira o nome">
-                                        <input type="text" id="Idade_Mae" maxlength="3" placeholder="Insira a Idade">
+                                        <input type="text" id="Idade_Mae" placeholder="Insira a Idade">
                                     <!--Fim da Subclasse Mae_cima para ficarem na parte superior -->    
 
                                     <!--Inicio da Subclasse Mae_Baixo para ficarem na parte inferior -->
@@ -197,7 +193,7 @@
                                         </div>
                                     
                                         <input type="text" id="Prof_Mae" placeholder="Insira a Profissão">
-                                        <input type="text" id="Altura_Mae" pattern="[0-9]{1}m [0-9]{2}cm" maxlength="7" placeholder="Ex: 1m 60cm">
+                                        <input type="text" id="Altura_Mae" placeholder="Ex: 1m 60cm">
                                     <!--Fim da Subclasse Mae_Baixo para ficarem na parte inferior -->
                                 
                                 </div>
@@ -209,26 +205,26 @@
                                     <button type="button" class="Seguinte" onclick="Proxima_Pag()">Próxima Página</button>
                                 </div>
                             <!--Fim da subclasse butoes-->
-                        </form>
-                    </div>
-                <!--Fim da classe Pais-->
-
-                <!--Inicio da classe Observações-->
-                    <div class="Observacao Paginas" id="Pag_4"> <!--Chama duas classes a Observacao e Paginas-->
-                        <h1>Observações</h1>
-                        <div class="Obs_Titulo">
-                            <label>Exemplo: problemas de sáude</label>
                         </div>
-                        <textarea id="Obs" placeholder="Insira aqui as Observações que deseja fazer"></textarea>
+                    <!--Fim da classe Pais-->
 
-                        <!--Inicio da subclasse butoes-->
-                            <div class="butoes">
-                                <button type="button" class="Anterior" onclick="Pag_Anterior()">Página Anterior</button>
-                                <button class="Envia" type="submit" id="Enviar">Enviar</button>
+                    <!--Inicio da classe Observações-->
+                        <div class="Observacao Paginas" id="Pag_4"> <!--Chama duas classes a Observacao e Paginas-->
+                            <h1>Observações</h1>
+                            <div class="Obs_Titulo">
+                                <label>Exemplo: problemas de sáude</label>
                             </div>
-                        <!--Inicio da subclasse butoes-->
-                    </div>
-                <!--Fim da classe Observações-->
+                            <textarea id="Obs" placeholder="Insira aqui as Observações que deseja fazer"></textarea>
+
+                            <!--Inicio da subclasse butoes-->
+                                <div class="butoes">
+                                    <button type="button" class="Anterior" onclick="Pag_Anterior()">Página Anterior</button>
+                                    <button class="Envia" type="submit" id="Enviar">Enviar</button>
+                                </div>
+                            <!--Inicio da subclasse butoes-->
+                        </div>
+                    <!--Fim da classe Observações-->
+                </form>
             </div>
         </div>
         <script src="app.js"></script>
