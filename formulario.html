@@ -13,7 +13,7 @@
             </div>
             <div class="main_Form_Direita">
                 <!--Inicio da classe dados pessoais-->
-                    <div class="Dados_Pesoais" id="Pag_1">
+                    <div class="Dados_Pesoais Paginas" id="Pag_1"><!--Chama duas classes a Dados_Pesoais e Paginas-->
                         <form>
                             <h1>Dados pessoais</h1> 
                             <!--Inicio da classe Nome_Data e Inputs correspondentes-->
@@ -23,7 +23,7 @@
                                 </div>   
 
                                     <!--Nome-->
-                                    <input type="text" id="nome" oninput="this.value=this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');"  required  maxlength="150" placeholder="Insira um Nome">
+                                    <input type="text" id="nome" oninput="this.value=this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');"  required minlength="3" maxlength="150" placeholder="Insira um Nome">
                                     <!--O placehoder serve para escrever dentro do Input o oniput serve para aceitar apaenas letras neste campo-->
                                     
                                     <!--Data-->
@@ -68,13 +68,13 @@
                                 </div>
                             <!--Fim da classe Cod_Postal_e_Input-->
 
-                             <button type="button" id="Seguinte" class="StyleButao" onclick="Verifica1();Proxima_Pag() ">Próxima Página</button><!--Chama as funções Proxima paginah e Verifica1 e o type buton evita que a página renicie-->
+                             <button type="button" class="butoes Seguinte" onclick="Proxima_Pag() ">Próxima Página</button><!--Chama as funções Proxima paginah e Verifica1 e o type buton evita que a página renicie-->
                         </form>
                     </div>
                 <!--Fim da classe dados pessoais-->
 
                 <!--Inicio da classe Contactos-->
-                    <div class="Contactos" id="Pag_2">
+                    <div class="Contactos Paginas" id="Pag_2"><!--Chama duas classes a Contactos e Paginas-->
                         <form>
                             <h1>Contactos</h1>
                             <!--Início da subclasse Contacto_Próprio-->
@@ -138,8 +138,8 @@
 
                             <!--Inicio da subclasse butoes-->
                                 <div class="butoes">
-                                    <button type="button" class="Anterior" id="Anterior" onclick="Pag_Anterior()">Página Anterior</button>
-                                    <button type="button" class="Seguinte" id="Seguinte" onclick="Proxima_Pag()">Próxima Página</button>
+                                    <button type="button" class="Anterior" onclick="Pag_Anterior()">Página Anterior</button>
+                                    <button type="button" class="Seguinte"  onclick="Proxima_Pag()">Próxima Página</button>
                                 </div>
                             <!--Inicio da subclasse butoes-->
                         </form>
@@ -147,7 +147,7 @@
                 <!--Fim da classe Contactos-->
 
                 <!--Inicio da classe Pais-->
-                    <div class="Pais" id="Pag_3">
+                    <div class="Pais Paginas" id="Pag_3"><!--Chama duas classes a Pais e Paginas-->
                         <form>
                             <h1>Pais</h1>
                             <!--Inicio da subclasse Pais_Pai-->
@@ -206,8 +206,8 @@
 
                             <!--Inicio da subclasse butoes-->
                                 <div class="butoes">
-                                    <button type="button" class="Anterior" id="Anterior"  onclick="Pag_Anterior()">Página Anterior</button>
-                                    <button type="button" class="Seguinte" id="Seguinte" onclick="Proxima_Pag()">Próxima Página</button>
+                                    <button type="button" class="Anterior"  onclick="Pag_Anterior()">Página Anterior</button>
+                                    <button type="button" class="Seguinte" onclick="Proxima_Pag()">Próxima Página</button>
                                 </div>
                             <!--Fim da subclasse butoes-->
                         </form>
@@ -215,7 +215,7 @@
                 <!--Fim da classe Pais-->
 
                 <!--Inicio da classe Observações-->
-                    <div class="Observacao" id="Pag_4">
+                    <div class="Observacao Paginas" id="Pag_4"> <!--Chama duas classes a Observacao e Paginas-->
                         <h1>Observações</h1>
                         <div class="Obs_Titulo">
                             <label>Exemplo: problemas de sáude</label>
@@ -224,7 +224,7 @@
 
                         <!--Inicio da subclasse butoes-->
                             <div class="butoes">
-                                <button type="button" class="Anterior" id="Anterior"  onclick="Pag_Anterior()">Página Anterior</button>
+                                <button type="button" class="Anterior" onclick="Pag_Anterior()">Página Anterior</button>
                                 <button class="Envia" type="submit" id="Enviar">Enviar</button>
                             </div>
                         <!--Inicio da subclasse butoes-->
