@@ -1,5 +1,4 @@
 *{
-    
     margin: 0;/*Serve para deixar sem margem*/
     padding: 0;/*Serve para deixar sem interior*/
     box-sizing: border-box;/*Serve para definir o tamanho total de um elemento (largura e altura)*/
@@ -38,6 +37,7 @@ body{
 
     /*Inicio Da Classe main_Form_Direita*/
         .main_Form_Direita{
+            border: 2px solid rgb(17, 0, 255);
             flex: 2;/*Diz o espaço que vai ocupar*/
             margin: 10px;
             display: flex;
@@ -46,6 +46,20 @@ body{
             width: 100%;
         }
 
+        .main_Form_Direita h1{
+            font-size:3rem;
+            justify-self: center;
+            font-style: oblique;
+        }
+        .main_Form_Direita input{
+                    background-color: rgb(230, 228, 228);
+                    border: none;
+                    border-radius: 10px;
+                    outline: none;
+                    font-size: 15px;
+                    padding: 0.3rem ;
+                    height: 2rem;/*1 rem é igual a 16px*/
+        }
         .main_Form_Direita button{
                 border: 2px solid red;
                 border-radius: 20px;
@@ -54,298 +68,84 @@ body{
                 margin: 5px;
                 padding: 10px;
                 transition: 0.5s;
-            }
+        }
 
             .main_Form_Direita button:hover{
                 background-color: red;
                 color: white;
             }
-        /*Inicio da subclasse Dados_Pesoais*/
-            .Dados_Pesoais{
-                display: block;
-                flex-direction: row;
-                width: 100%;
-                height: 100%;
-                padding: 20px;
-                overflow: hidden;
-                margin: 20px 
-            }
 
-            .Dados_Pesoais h1{
-                font-size: 45px;
-                justify-content: center;
-                text-align: center;
-                padding: 10px;
-                margin-right: 8%;
-            }
+            /*Inicio da classe dados pessoais*/
+                .Dados_Pesoais{
+                    border: 1px solid red;
+                    display: flex;
+                    align-items: center;
+                    min-width: 100vh;
+                    justify-content: center;
+                    overflow: hidden;
+                }
+            /*Fim da classe dados pessoais*/
 
-            .Dados_Pesoais h2{
-                margin: 5px 0px;
-                font-size: 20px;
-            }
+            /*Inicio da classe dados pessoais*/
+                .Dados_Pesoais{
+                    border: 1px solid red;
+                    display: flex;
+                    align-items: center;
+                    min-width: 100vh;
+                    justify-content: center;
+                    overflow: hidden;
 
-            .Dados_Pesoais input{
-                background-color: rgb(230, 228, 228);
-                border: none;
-                border-radius: 10px;
-                outline: none;
-                width: 45%;
-                height: 7%;
-                padding: 10px;
-                margin-right: 25px;
-                margin-bottom: 5px;
-                font-size: 15px;
-            }
-            /*Inico da Configuração das subclasse Nome_Data*/
+                }
+
                 .Nome_Data{
                     display: flex;
-                    gap: 42%;/*Espaço entre os itens*/
                 }
-            /*Fim da Configuração das subclasses Nome_Data*/
 
-            /*Inico da Configuração das subclasse Contribuinte_Cartao*/
-                .Contribuinte_Cartao{
-                    display: flex;
-                    gap: 17%;
+
+                .Nome{
+                    justify-self: left;
+                    width: 50%;
                 }
-            /*Fim da Configuração das subclasse Contribuinte_Cartao*/
 
-            /*Inico da Configuração das subclasse Morada_Localidade*/
-                .Morada_Localidade{
-                    display: flex;
-                    gap: 39%;
+                .Data{
+                    width: 50%;
+                    justify-self: right;
                 }
-            /*Fim da Configuração das subclasses Morada_Localidade*/
+            /*Fim da classe dados pessoais*/
 
-            /*Inicio da Configuração Cod_Postal*/
-                .Cod_Postal{
+            /*Inicio da classe dados Contactos*/
+                .Contactos{
+                    border: 1px solid red;
                     display: flex;
+                    align-items: center;
+                    min-width: 100vh;
                     justify-content: center;
-                    margin-top: 10px;
-                    margin-right: 30px;
+                    overflow: hidden;
                 }
-                .Input1 {
+            /*Fim da classe Contactos*/
+
+            /*Inicio da classe Pais*/
+                .Pais{
+                    border: 1px solid red;
                     display: flex;
-                    justify-self: center;
+                    align-items: center;
+                    min-width: 100vh;
+                    justify-content: center;
+                    overflow: hidden;
                 }
-            /*Fim da Configuração Cod_Postal*/
+            /*Fim da classe dados Pais*/
 
-            .Dados_Pesoais button{
-                display: flex;
-                justify-self: center;
-                border: 2px solid red;
-                border-radius: 20px;
-                background-color: #ffffff;
-                color: red;
-                margin-top: 20px;
-                margin-left: -5%;
-                padding: 10px;
-                transition: 0.5s;
-            }
-
-            .Dados_Pesoais button:hover{
-                background-color: red;
-                color: white;
-            }
-        /*Fim da subclasse Dados_Pesoais*/
-
-        /*Inicio da subclasse Contactos*/
-            .Contactos{
-                display: none;
-                flex-direction: row;/*Alinha na horizotal*/
-                width: 100%;
-                height: 100%;
-                padding: 20px;
-                overflow: hidden;
-                margin: 20px 
-            }
-
-            .Contactos h1{
-                font-size: 40px;
-                justify-content: center;/*Alinha no eixo do x*/
-                text-align: center;/*Alinha no eixo do y*/
-                margin-right: 8%;
-                margin-bottom: 5px;
-            }
-
-            .Contactos h2{
-                font-size: 25px;
-            }
-
-            .Contactos label{
-                font-size: 20px;
-            }
-
-            .Contactos input{
-                background-color: rgb(230, 228, 228);
-                border: none;
-                border-radius: 10px;
-                outline: none;
-                width: 45%;
-                height: 6%;
-                padding: 10px;
-                margin-right: 25px;
-                margin-bottom: 5px;
-                font-size: 15px;
-            }
-
-            /*Inico da Configuração das subclasse Proprio_Tel_Email*/
-                .Proprio_Tel_Email{
+             /*Inicio da classe Observacao*/
+                .Observacao{
+                    border: 1px solid red;
                     display: flex;
-                    gap: 39%;
+                    align-items: center;
+                    min-width: 100vh;
+                    justify-content: center;
+                    overflow: hidden;
                 }
-            /*Fim da Configuração das subclasse Proprio_Tel_Email*/
-
-            /*Inico da Configuração das subclasse Pai_Tel_Email*/
-                .Pai_Tel_Email{
-                    display: flex;
-                    gap: 39%;
-                }
-            /*Fim da Configuração das subclasse Pai_Tel_Email*/
-
-            /*Inico da Configuração das subclasse Mae_Tel_Email*/
-                .Mae_Tel_Email{
-                    display: flex;
-                    gap: 39%;
-                }
-            /*Fim da Configuração das subclasse Mae_Tel_Email*/
-
-            /*Inico da Configuração das subclasse Urgente*/
-                .Urgente{
-                    display: flex;
-                    gap: 39%;
-                }
-            /*Fim da Configuração das subclasse Urgente*/
-
-            .butoes{
-                display: flex;
-                justify-content: center;
-                margin-top: 20px;
-                margin-right: 7%;
-            }
-        /*Fim da subclasse Contactos*/
+            /*Fim da classe dados Observacao*/
 
 
-
-        /*Inicio da subclasse Pais*/
-            .Pais{
-                display: none;
-                flex-direction: row;/*Alinha na horizotal*/
-                width: 100%;
-                height: 100%;
-                padding: 20px;
-                overflow: hidden;
-                margin: 20px 
-            }
-
-            .Pais h1{
-                font-size: 40px;
-                justify-content: center;/*Alinha no eixo do x*/
-                text-align: center;/*Alinha no eixo do y*/
-                margin-left: -7%;
-                margin-bottom: 1%;
-            }
-            
-            .Pais h2{
-                font-size: 30px;
-            }
-
-            .Pais label{
-                font-size: 20px;
-            }
-
-            .Pais input{
-                background-color: rgb(230, 228, 228);
-                border: none;
-                border-radius: 10px;
-                outline: none;
-                width: 45%;
-                height: 6%;
-                padding: 10px;
-                margin-right: 25px;
-                margin-bottom: 5px;
-                font-size: 15px;
-            }
-
-            /*Inico da Configuração das subclasse Pai_cima*/
-                .Pai_cima{
-                    display: flex;
-                    gap: 42%; 
-                }
-            /*Fim da Configuração das subclasse Pai_cima*/
-
-            /*Inico da Configuração das subclasse Pai_Baixo*/
-                .Pai_Baixo{
-                    display: flex;
-                    gap: 38%; 
-                }
-            /*Fim da Configuração das subclasse Pai_Baixo*/
-
-            /*Inico da Configuração das subclasse Mae_Cima*/
-                .Mae_Cima{
-                    display: flex;
-                    gap: 42%; 
-                }
-            /*Fim da Configuração das subclasse Mae_Cima*/
-
-            /*Inico da Configuração das subclasse Mae_Baixo*/
-                .Mae_Baixo{
-                    display: flex;
-                    gap: 38%; 
-                }
-            /*Fim da Configuração das subclasse Mae_Baixo*/
-
-            .butoes{
-                display: flex;
-                justify-content: center;
-                margin-top: 20px;
-                margin-right: 4%;
-            }
-
-        /*Fim da subclasse Pais*/
-
-
-
-
-        /*Inicio da subclasse Observacao*/
-            .Observacao{
-                display: none;
-                flex-direction: row;/*Alinha na horizotal*/
-                width: 100%;
-                height: 100%;
-                padding: 20px;
-                overflow: hidden;
-                margin: 20px 
-            }
-
-            .Observacao h1{
-                font-size: 40px;
-                justify-content: center;/*Alinha no eixo do x*/
-                text-align: center;/*Alinha no eixo do y*/
-                margin-left: -5%;
-                margin-bottom: 20px;
-            }
-
-            .Observacao label{
-                font-size: 20px;
-            }
-            .Observacao textarea{
-                background-color: rgb(230, 228, 228);
-                padding: 5px 10px;
-                outline: none;
-                margin: 20px;
-                width: 90%;
-                height: 50%;
-                resize: none;
-            }
-
-            .butoes{
-                display: flex;
-                justify-content: center;
-                margin-top: 20px;
-                margin-left: -5%;
-            }
-        /*Fim da subclasse Observacao*/
-        
     /*Fim Da Classe main_Direita*/
 /*Fim Da Classe main_Form*/
