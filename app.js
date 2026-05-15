@@ -7,6 +7,24 @@ Seguinte_pagina[0].style.display="block";//Serve para o Primeiro elemento  ficar
 let cont=0;//Variavel para mudar de página
 let i=0;//Variavel para o conteudo da Seguinte_pagina
 
+
+
+function Letras(id){
+    const So_Letras=document.getElementById(id);
+    So_Letras.oninput=function(){
+        this.value=this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, ''); //oniput serve para aceitar apaenas letras neste campo
+    }
+}//Serve para Nome, Localidade, Nome_Pai, Prof_Pai, Nome_Mãe, Prof_Mãe 
+
+function Numeros(id){
+    const So_Num=document.getElementById(id);
+    So_Num.oninput=function(){
+        this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
+    }
+}//Nif, Cod_Postal, Tel, Tel_Pai, Tel_Mae, Tel_Urgente, Idade_Pai, Idade_Mae
+
+
+
 //Inicio Fucção que vai para a página seguinte
     function Proxima_Pag(){
         cont++;
