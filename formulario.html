@@ -16,59 +16,68 @@
                     <!--Inicio da classe dados pessoais-->
                         <div class="Dados_Pesoais Paginas" id="Pag_1"><!--Chama duas classes a Dados_Pesoais e Paginas-->
                             <h1>Dados pessoais</h1> 
-                            <!--Inicio da classe Nome_Data e Inputs correspondentes-->
+                            <!--Inicio da classe Nome_Data-->
                                 <div class="Nome_Data">
-                                    <h2>Nome</h2> 
-                                    <h2 >Data de Nascimento</h2>
-                                </div>   
+                                <!--Inicio da classe Nome-->
+                                    <div class="Nome">
+                                        <h2>Nome</h2> 
+                                        <input type="text" id="nome" placeholder="Insira um Nome">
+                                    </div>   
+                                <!--Fim da classe Nome-->
 
-                                    <!--Nome-->
-                                    <input type="text" id="nome" placeholder="Insira um Nome">
-                                    <!--O placehoder serve para escrever dentro do Input o oniput serve para aceitar apaenas letras neste campo-->
-                                    
-                                    <!--Data-->
-                                    <input type="date" id="data_Nascimento">
-                            <!--Fim da classe Nome_Data e Inputs correspondentes-->
-                            
-                            
-                            <!--Inicio da classe Contribuinte_Cartao e Inputs correspondentes-->
-                                <div class="Contribuinte_Cartao">
-                                    <h2>Nº do Contribuinte/NIF</h2>
-                                    <h2>BI/CC</h2>
+                                <!--Inicio da classe Data-->
+                                    <div class="Data">
+                                        <h2>Data de Nascimento</h2>
+                                        <input type="date" id="data_Nascimento">
+                                    </div>
+                                <!--Fim da classe Data-->
                                 </div>
-                            
-                                <!--Contribuinte-->
-                                <input type="text" id="NIF" placeholder="Ex: 123456789">
-                                <!--O input mode serve para que no telémovel apareça somente números e o maxlength só deixa colocar 9 numeros-->
-                                
-                                <!--BI_CC-->
-                                <input type="text" id="BI_CC" placeholder="Ex: 12345678 9 AB0">
-                                <!--O pattern serve para seguir um formato expecífico sendo que o [0-9]/[A-Z] é os digitos que são permitidos e o {9}/{2}/{1} é a quantidade desses valores que podem ser inseridos-->
-                            <!--Fim da classe Contribuinte_Cartao e Inputs correspondentes-->
+                            <!--Fim da classe Nome_Data-->    
 
-                            <!--Inicio da classe Morada_Localidade e Inputs correspondentes-->
+                            <!--Inicio da classe Contribuinte_BI-->
+                                <div class="Contribuinte_BI">
+                                    <!--Inicio da classe Contribuinte-->
+                                        <div class="Contribuinte">
+                                            <h2>Nº do Contribuinte/NIF</h2>
+                                            <input type="text" id="NIF" placeholder="Ex: 123456789">
+                                        </div>
+                                    <!--Fim da classe Contribuinte_Cartao-->
+                                    <!--Inicio da classe Cartao-->
+                                        <div class="Cartao_BI">
+                                            <h2>BI/CC</h2>
+                                            <input type="text" id="BI_CC" placeholder="Ex: 12345678 9 AB0">
+                                        </div>
+                                    <!--Fim da classe Cartao-->
+                                </div>
+                            <!--Fim da classe Contribuinte_BI-->
+                            
+                            <!--Inicio da classe Morada_Localidade-->
                                 <div class="Morada_Localidade">
-                                    <h2>Morada</h2>
-                                    <h2>Localidade</h2>
+                                    <!--Inicio da classe Morada-->
+                                        <div class="Morada">
+                                            <h2>Morada</h2>
+                                            <input type="text" id="morada" placeholder="Insira a sua Morada">
+                                        </div>
+                                    <!--Fim da classe Morada-->
+
+                                    <!--Inicio da classe Localidade-->
+                                        <div class="Localidade">
+                                            <h2>Localidade</h2>
+                                            <input type="text" id="localidade" placeholder="Insira a sua Localidade">
+                                        </div>
+                                    <!--Fim da classe Localidade-->
                                 </div>
 
-                                <!--Morada-->
-                                <input type="text" id="morada" placeholder="Insira a sua Morada">
-                                <!--Localidade-->
-                                <input type="text" id="localidade" placeholder="Insira a sua Localidade">
-                            <!--Fim da classe Morada_Localidade e Inputs correspondentes-->
-
+                            <!--Fim da classe Morada_Localidade-->
                             <!--Inicio da classe Cod_Postal_e_Input-->
-                                <div class="Cod_Postal_e_Input">
+                            
+                            <!--Inicio da classe Cod_Postal-->
                                     <div class="Cod_Postal">
                                         <h2>Código Postal</h2>
+                                        <input class="Input1" type="text" id="codigo_Postal" placeholder="Ex: XXXX-YYY">
                                     </div>
-                                    <input class="Input1" type="text" id="codigo_Postal" placeholder="Ex: XXXX-YYY">
-                                </div>
-                            <!--Fim da classe Cod_Postal_e_Input-->
-
-                                <button type="button" class="butoes Seguinte" onclick="Proxima_Pag() ">Próxima Página</button><!--Chama as funções Proxima paginah e Verifica1 e o type buton evita que a página renicie-->
-                    </div>
+                            <!--Fim da classe Cod_Postal-->
+                        </div>
                     <!--Fim da classe dados pessoais-->
 
                     <!--Inicio da classe Contactos-->
@@ -78,13 +87,15 @@
                                 <div class="Proprio">
                                     <h2>Próprio</h2>
                                     <div class="Proprio_Tel_Email">
-                                        <label>Telefone</label>
-                                        <label>E-mail</label>
+                                        <div class="Proprio_Tel">
+                                            <label>Telefone</label>
+                                            <input type="text" id="Tel" placeholder="Insira o Nº Telefone">
+                                        </div>
+                                        <div class="Proprio_Email">
+                                            <label>E-mail</label>
+                                            <input type="email" id="Email" placeholder="Insira E-mail">
+                                        </div>
                                     </div>
-                                        <!--Tel-->
-                                    <input type="text" id="Tel" placeholder="Insira o Nº Telefone">
-                                        <!--email-->
-                                    <input type="email" id="Email" placeholder="Insira E-mail">
                                 </div>
                             <!--Fim da subclasse Contacto_Próprio-->
 
@@ -92,14 +103,17 @@
                                 <div class="Contacto_Pai"> 
                                     <h2>Pai</h2>
                                     <div class="Pai_Tel_Email">
-                                        <label>Telefone</label>
-                                        <label>E-mail</label>
+                                        <div class="Pai_Tel">
+                                            <label>Telefone</label>
+                                            <input type="text" id="Tel_Pai" placeholder="Insira o Nº Telefone">
+                                        </div>
+
+                                        <div class="Pai_Email">
+                                            <label>E-mail</label>
+                                            <input type="email" id="Email_Pai" placeholder="Insira o E-mail">
+                                        </div>
                                     </div>
                                     
-                                    <!--Tel-->
-                                    <input type="text" id="Tel_Pai" placeholder="Insira o Nº Telefone">
-                                    <!--Email-->
-                                    <input type="email" id="Email_Pai" placeholder="Insira o E-mail">
                                 </div>
                             <!--Fim da subclasse Contacto_Pai-->
 
@@ -107,38 +121,33 @@
                                 <div class="Contacto_Mae">
                                     <h2>Mãe</h2>
                                     <div class="Mae_Tel_Email">
-                                        <label>Telefone</label>
-                                        <label>E-mail</label>
+                                         <div class="Mae_Tel">
+                                            <label>Telefone</label>
+                                            <input type="text" id="Tel_Mae" placeholder="Insira o Nº Telefone">
+                                        </div>
+                                         <div class="Mae_Email">
+                                            <label>E-mail</label>
+                                            <input type="email" id="Email_Mae" placeholder="Insira o E-mail">
+                                        </div>
                                     </div>
-                                    <!--Tel-->
-                                    <input type="text" id="Tel_Mae" placeholder="Insira o Nº Telefone">
-                                    <!--email-->
-                                    <input type="email" id="Email_Mae" placeholder="Insira o E-mail">
                                 </div>
                             <!--Fim da subclasse Contacto_Mae-->
-
 
                             <!--Início da subclasse Contacto_Urgente-->
                                 <div class="Contacto_Urgente">
                                     <h2>Urgente</h2>
-                                    <div class="Urgente">
-                                        <label>Telefone</label>
-                                        <label>E-mail</label>
+                                    <div class="Urgente_Tel_Email">
+                                        <div class="Urgente_Tel">
+                                            <label>Telefone</label>
+                                            <input type="text" id="Tel_Urgente" placeholder="Insira o Nº Telefone">
+                                        </div>
+
+                                        <div class="Urgente_Email">
+                                            <label>E-mail</label>
+                                            <input type="email" id="Email_Urgente" placeholder="Insira o E-mail">
                                     </div>
-
-                                    <!--Tel-->
-                                    <input type="text" id="Urgente" placeholder="Insira o Nº Telefone">
-                                    <!--email-->
-                                    <input type="email" id="Email_Urgente" placeholder="Insira o E-mail">
                                 </div>
-                            <!--Fim da subclasse Contacto_Urgente-->
-
-                            <!--Inicio da subclasse butoes-->
-                                <div class="butoes">
-                                    <button type="button" class="Anterior" onclick="Pag_Anterior()">Página Anterior</button>
-                                    <button type="button" class="Seguinte"  onclick="Proxima_Pag()">Próxima Página</button>
-                                </div>
-                            <!--Inicio da subclasse butoes-->
+                            <!--Fim da subclasse Contacto_Urgente-->    
                     </div>
                     <!--Fim da classe Contactos-->
 
@@ -149,62 +158,61 @@
                                 <div class="Pais_Pai">
                                     <h2>Pai</h2>
                                     <!--Inicio da Subclasse Pai_cima para ficarem na parte superior -->
-                                        <div class="Pai_cima">
-                                            <label>Nome</label>
-                                            <label>Idade</label>
+                                        <div class="Pai_Nome_Idade">
+                                            <div class="NomePai">
+                                                <label>Nome</label>
+                                                <input type="text" id="Nome_Pai"  placeholder="Insira o nome">
+                                            </div>
+                                            <div class="IdadePai">
+                                                <label>Idade</label>
+                                                <input type="text" id="Idade_Pai" placeholder="Insira a Idade">
+                                            </div> 
                                         </div>
                                         
-                                        
-                                        <input type="text" id="Nome_Pai"  placeholder="Insira o nome">
-                                        <input type="text" id="Idade_Pai" placeholder="Insira a Idade">
-                                        
+                                        <div class="Pai_Profissao_Altura">
+                                            <div class="ProfissaoPai">
+                                                <label>Profissão</label>
+                                                <input type="text" id="Prof_Pai" placeholder="Insira a Profissão">
+                                            </div>
+                                            <div class="AlturaPai">
+                                                <label>Altura</label>
+                                                <input type="text" id="Altura_Pai" placeholder="Ex: 1m 75cm">
+                                            </div>
+                                        </div>
                                     <!--Fim das Subclasses Pai_cima para ficarem na parte superior -->
-                                    
-                                    <!--Inicio das Subclasse Pai_Baixo para ficarem na parte inferior -->
-                                        <div class="Pai_Baixo">
-                                            <label>Profissão</label>
-                                            <label>Altura</label>
-                                        </div>
-                                        
-                                        
-                                        <input type="text" id="Prof_Pai" placeholder="Insira a Profissão">
-                                        <input type="text" id="Altura_Pai" placeholder="Ex: 1m 75cm">
-                                    <!--Fim das Subclasses Pai_Baixo para ficarem na parte inferior -->
-                                </div>
+                               </div>
                             <!--Fim da subclasse Pais_Pai-->
 
                             <!--Inicio da subclasse Pais_Mãe-->
                                 <div class="Pais_Mae">
-                                    <h2>Mãe</h2>
-                                    <!--Inicio da Subclasse Mae_cima para ficarem na parte superior -->
-                                        <div class="Mae_cima">
-                                            <label>Nome</label>
-                                            <label>Idade</label>
-                                        </div>
-                                        
-                                        <input type="text" id="Nome_Mae"  placeholder="Insira o nome">
-                                        <input type="text" id="Idade_Mae" placeholder="Insira a Idade">
-                                    <!--Fim da Subclasse Mae_cima para ficarem na parte superior -->    
+                                    <h2>
+                                        Mãe
+                                    </h2>
+                                        <div class="Mae_Nome_Idade">
+                                            <div class="Mae_Nome">
+                                                <label>Nome</label>
+                                                <input type="text" id="Nome_Mae"  placeholder="Insira o nome">
+                                            </div>
 
-                                    <!--Inicio da Subclasse Mae_Baixo para ficarem na parte inferior -->
-                                        <div class="Mae_Baixo">
-                                            <label>Profissão</label>
-                                            <label>Altura</label>
+                                            <div class="Mae_Idade">
+                                                <label>Idade</label>
+                                                <input type="text" id="Idade_Mae" placeholder="Insira a Idade">
+                                            </div>    
                                         </div>
                                     
-                                        <input type="text" id="Prof_Mae" placeholder="Insira a Profissão">
-                                        <input type="text" id="Altura_Mae" placeholder="Ex: 1m 60cm">
-                                    <!--Fim da Subclasse Mae_Baixo para ficarem na parte inferior -->
-                                
+
+                                        <div class="Mae_Profissao_Altura">
+                                            <div class="ProfissaoMae">
+                                                <label>Profissão</label>
+                                                <input type="text" id="Prof_Mae" placeholder="Insira a Profissão">
+                                            </div>
+                                            <div class="MaeAltura">
+                                                <label>Altura</label>
+                                                <input type="text" id="Altura_Mae" placeholder="Ex: 1m 60cm">
+                                            </div>
+                                        </div>
                                 </div>
                             <!--Fim da subclasse Pais_Mãe-->
-
-                            <!--Inicio da subclasse butoes-->
-                                <div class="butoes">
-                                    <button type="button" class="Anterior"  onclick="Pag_Anterior()">Página Anterior</button>
-                                    <button type="button" class="Seguinte" onclick="Proxima_Pag()">Próxima Página</button>
-                                </div>
-                            <!--Fim da subclasse butoes-->
                         </div>
                     <!--Fim da classe Pais-->
 
@@ -217,13 +225,19 @@
                             <textarea id="Obs" placeholder="Insira aqui as Observações que deseja fazer"></textarea>
 
                             <!--Inicio da subclasse butoes-->
-                                <div class="butoes">
-                                    <button type="button" class="Anterior" onclick="Pag_Anterior()">Página Anterior</button>
+                                <div class="butao_Envia">
                                     <button class="Envia" type="submit" id="Enviar">Enviar</button>
                                 </div>
                             <!--Inicio da subclasse butoes-->
                         </div>
                     <!--Fim da classe Observações-->
+
+                    <!--Inicio da subclasse butoes-->
+                                <div class="butoes">
+                                    <button type="button" class="Anterior" onclick="Pag_Anterior()">Página Anterior</button>
+                                    <button type="button" class="Seguinte"  onclick="Proxima_Pag()">Próxima Página</button>
+                                </div>
+                    <!--Inicio da subclasse butoes-->
                 </form>
             </div>
         </div>
