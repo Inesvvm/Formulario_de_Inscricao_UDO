@@ -88,7 +88,7 @@ body{
                 .Dados_Pesoais{
                     display: flex;
                     align-items: center;
-                    min-width: 100vh;
+                    width: 100%;
                     justify-content: center;
                     overflow: hidden;
                     margin-bottom: 5%;
@@ -121,7 +121,7 @@ body{
                     display: flex;
                     align-items: center;
                     margin-bottom: 3rem;
-                    min-width: 100vh;
+                    width: 100%;
                     justify-content: center;
                     overflow: hidden;
                 }
@@ -136,10 +136,10 @@ body{
 
             /*Inicio da classe Pais*/
                 .Pais{
-                    border: 1px solid red;
+                    
                     display: flex;
                     align-items: center;
-                    min-width: 100vh;
+                    width: 100%;
                     justify-content: center;
                     overflow: hidden;
                     margin-bottom: 2rem;
@@ -171,46 +171,78 @@ body{
                 /*Fim das subclasses AlturaPai, .MaeAltura*/
             /*Fim da classe dados Pais*/
 
-            /*Inicio da classe Observacao*/
-                .Observacao{
-                    border: 1px solid red;
+            /*Inicio da classe Foto*/
+                .Foto{
                     display: flex;
-                    align-items: center;
+                    
                     width: 100%;
                     height: 80%;
-                    min-width: 100vh;
+                }
+
+                .Insere_Foto{
+                    align-self: center;
+                    justify-self: center;
+                    margin-right: 5%;
+                }
+                .upload{ 
+                    display: flex;
+                    align-items: center;
                     justify-content: center;
+                    background-color: rgb(230, 228, 228);
+                    overflow: hidden;
+                    border: 2px dashed ;
+                    color: rgb(82, 82, 82);
+                    width: 15rem;
+                    height: 15rem;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: 1s;
+                }
+
+                .upload:hover{
+                    color: rgb(39, 39, 39);
+                    background-color: #858583;
+                }
+
+                .Inserir_Imagem{
+                    width: 100%;
+                    object-fit: cover;/*Faz que a imagem não distorcida*/
+                }
+                #Inserir_Foto{
+                    display: none;
+                }
+            /*Fim da classe Foto*/
+
+
+
+            /*Inicio da classe Observacao*/
+                .Observacao{
+                    display: flex;
+                    width: 100%;
+                    height: 80%;
                     overflow: hidden;
                 }
 
-                .Observacoes{
-                    border: 1px solid rgb(4, 0, 255);
+                .Observacao h1{
+                    font-size: 40px;
+                    justify-content: center;/*Alinha no eixo do x*/
+                    text-align: center;/*Alinha no eixo do y*/
+                    margin-left: -5%;
+                    margin-bottom: 20px;
                 }
 
-                .Obs_Imagem{
-                    flex: 1;
+                .Observacao label{
+                    font-size: 20px;
                 }
-
-                .Foto{
-                    display: flex;
-                    flex: 1;
-                    text-align: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 10rem;
+                .Observacao textarea{
+                    background-color: rgb(230, 228, 228);
+                    padding: 5px 10px;
+                    outline: none;
+                    margin: 20px;
+                    width: 90%;
+                    height: 50%;
+                    resize: none;
                 }
-
-                .upload{
-                    border-radius: 20px;
-                    border: 2px dashed rgb(131, 127, 127);
-                    color: rgb(131, 127, 127);
-                    background-color: rgb(233, 231, 231);
-                    cursor: pointer;
-                }
-
-                input[type="file"] {
-  display: none;
-}
             /*Fim da classe dados Observacao*/
 
             /*Inicio da classe Observacao*/
@@ -222,7 +254,5 @@ body{
                     overflow: hidden;
                 }
             /*Fim da classe dados butoes*/
-            
-
     /*Fim Da Classe main_Direita*/
 /*Fim Da Classe main_Form*/

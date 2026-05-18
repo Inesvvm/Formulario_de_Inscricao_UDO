@@ -1,9 +1,18 @@
 const Seguinte_pagina=Array.from(document.querySelectorAll(".Paginas"));//O querySelectorAll seleciona todas as classes que tem Paginas
 const Botoes_Form=Array.from(document.querySelectorAll(".Botao_Form"));
 
+const Inserir_input=document.querySelector("#Inserir_Foto");//Busca os dados atuais do input
+const Inserir_Img=document.querySelector(".upload");//Vai ser o local para inserir a imagem
+const Text_Img='Insira uma Foto sua';
+let cont=0;//Variavel para mudar de página
+let i=0;//Variavel para o conteudo da Seguinte_pagina
+
+Inserir_Img.innerHTML=Text_Img;//Serve pra mudar o texto quando for lido;
+
 Seguinte_pagina.forEach((pagina)=>{
     pagina.style.display="none";
 });//Serve para aplicar em todos os elemetos da Pag_seguinte e pagina é uma varialvel temporaria com um nome a minha escolha
+
 
 function Botoes_Pag(i){
     Botoes_Form.forEach((Botoes_desativados)=>{
@@ -12,10 +21,10 @@ function Botoes_Pag(i){
 
     if(i==0){
         Botoes_Form[1].style.display="block";//Butao Proxima Página
-    }else if(i==1||i==2){
+    }else if(i==1||i==2||i==3){
         Botoes_Form[0].style.display="block";//Butao Página Anterior
         Botoes_Form[1].style.display="block";//Butao Proxima Página
-    }else if(i==3){
+    }else if(i==4){
         Botoes_Form[0].style.display="block";//Butao Página Anterior
         Botoes_Form[2].style.display="block";//Butao Enviar
     }
@@ -24,9 +33,31 @@ function Botoes_Pag(i){
 Seguinte_pagina[0].style.display="block";//Serve para o Primeiro elemento  ficar visivel
 Botoes_Pag(0);
 
-let cont=0;//Variavel para mudar de página
-let i=0;//Variavel para o conteudo da Seguinte_pagina
-let b=0;
+
+Inserir_input.addEventListener("change", function(event){//serve para quando for colocar uma imagem do input
+    const busca_arquivo=event.target;//busca o sitio onde está a imagem
+    const busca_file=busca_arquivo.files[0];//pega na imagem
+
+    if(busca_file){
+        const le_arquivo= new FileReader();//le a imagem que foi pegada
+
+        le_arquivo.addEventListener("load",function(event){//carrega a imagem
+            const Le_objetivo=event.target;//vai buscar a imagem
+
+            const img=document.createElement('img');//cria a tag para a imagem para ser colocada lá
+            img.src =Le_objetivo.result;//Cola o resultado da leitura no link da imagem
+            img.classList.add('Inserir_Imagem');
+
+            Inserir_Img.innerHTML="";//o texto é apagado para ser colocada a imagem
+            Inserir_Img.appendChild(img); //Coloca a nova <img> dentro do círculo visível do HTML
+        });
+        le_arquivo.readAsDataURL(busca_file);//coloca o a imagem
+    }else{
+        Inserir_Img.innerHTML=Text_Img;//Fica o texto se a ação for cancelada
+    }
+});
+
+
 
 //Serve para verificar os elementos 
 function Letras(id){
