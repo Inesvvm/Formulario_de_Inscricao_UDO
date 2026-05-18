@@ -37,7 +37,6 @@ body{
 
     /*Inicio Da Classe main_Form_Direita*/
         .main_Form_Direita{
-            border: 2px solid rgb(17, 0, 255);
             flex: 2;/*Diz o espaço que vai ocupar*/
             margin: 10px;
             display: flex;
@@ -47,70 +46,67 @@ body{
         }
 
         .main_Form_Direita h1{
-            font-size:3rem;
+            font-size:3rem;/*1rem=16px*/
             justify-self: center;
             font-style: oblique;
+            padding: 1rem;
         }
-        .main_Form_Direita input{
-                    background-color: rgb(230, 228, 228);
-                    border: none;
-                    border-radius: 10px;
-                    outline: none;
-                    font-size: 15px;
-                    padding: 0.3rem ;
-                    height: 2rem;/*1 rem é igual a 16px*/
+        .main_Form_Direita input, select{
+            background-color: rgb(230, 228, 228);
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            padding: 0.3rem ;
+            margin-left: 1rem;
+            width: 15rem;
+            height: 2rem;/*1 rem é igual a 16px*/
         }
         .main_Form_Direita button{
-                border: 2px solid red;
-                border-radius: 20px;
-                background-color: #ffffff;
-                color: red;
-                margin: 5px;
-                padding: 10px;
-                transition: 0.5s;
+            align-items: center;
+            border: 2px solid red;
+            border-radius: 20px;
+            background-color: #ffffff;
+            color: red;
+            padding: 0.6rem;
+            transition: 0.5s;
         }
 
-            .main_Form_Direita button:hover{
-                background-color: red;
-                color: white;
-            }
+        .main_Form_Direita button:hover{
+            background-color: red;
+            color: white;
+        }
 
             /*Inicio da classe dados pessoais*/
                 .Dados_Pesoais{
-                    border: 1px solid red;
                     display: flex;
                     align-items: center;
                     min-width: 100vh;
                     justify-content: center;
                     overflow: hidden;
+                    margin-bottom: 5%;
                 }
-            /*Fim da classe dados pessoais*/
+                
+                /*Inicio das subclasses Nome_Data, Contribuinte_BI, Morada_Localidade e Cod_Postal_Desporto*/
+                    .Nome_Data, .Contribuinte_BI, .Morada_Localidade, .Cod_Postal_Desporto{
+                        display: flex;
+                        margin-bottom: 1rem;
+                    }
 
-            /*Inicio da classe dados pessoais*/
-                .Dados_Pesoais{
-                    border: 1px solid red;
-                    display: flex;
-                    align-items: center;
-                    min-width: 100vh;
-                    justify-content: center;
-                    overflow: hidden;
+                    /*Inicio das subclasses Nome, Contribuinte, Morada e Cod_Postal*/
+                        .Nome, .Contribuinte, .Morada, .Cod_Postal{
+                            justify-self: left;
+                            width: 50%;
+                        }
+                    /*Fim das subclasses Nome, Contribuinte, Morada e Cod_Postal*/
 
-                }
-
-                .Nome_Data{
-                    display: flex;
-                }
-
-
-                .Nome{
-                    justify-self: left;
-                    width: 50%;
-                }
-
-                .Data{
-                    width: 50%;
-                    justify-self: right;
-                }
+                    /*Inicio das subclasses Data, Cartao_BI, Localidade e Desporto*/
+                        .Data, .Cartao_BI, .Localidade, .Desporto{
+                            width: 50%;
+                            justify-self: right;
+                        }
+                    /*Fim das subclasses Data, Cartao_BI, Localidade e Desporto*/
+                /*Fim da subclasse Nome_Data, Contribuinte_BI, Morada_Localidade e Cod_Postal_Desporto*/
             /*Fim da classe dados pessoais*/
 
             /*Inicio da classe dados Contactos*/
