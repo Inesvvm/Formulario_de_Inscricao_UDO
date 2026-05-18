@@ -51,6 +51,12 @@ body{
             font-style: oblique;
             padding: 1rem;
         }
+
+        .main_Form_Direita label{
+            font-size: 1.2rem;
+            margin-left: 0.5rem;
+            margin-right: -1rem;
+        }
         .main_Form_Direita input, select{
             background-color: rgb(230, 228, 228);
             border: none;
@@ -63,12 +69,13 @@ body{
             height: 2rem;/*1 rem é igual a 16px*/
         }
         .main_Form_Direita button{
-            align-items: center;
+            justify-content: center;
             border: 2px solid red;
             border-radius: 20px;
             background-color: #ffffff;
             color: red;
             padding: 0.6rem;
+            margin-left: -15%;
             transition: 0.5s;
         }
 
@@ -111,13 +118,20 @@ body{
 
             /*Inicio da classe dados Contactos*/
                 .Contactos{
-                    border: 1px solid red;
                     display: flex;
                     align-items: center;
+                    margin-bottom: 3rem;
                     min-width: 100vh;
                     justify-content: center;
                     overflow: hidden;
                 }
+
+                /*Inicio das subclasses Proprio_Tel_Email, Pai_Tel_Email, Mae_Tel_Email, Urgente_Tel_Email*/
+                    .Proprio_Tel_Email, .Pai_Tel_Email, .Mae_Tel_Email, .Urgente_Tel_Email{
+                        display: flex;
+                        margin: 0.4rem;
+                    }
+                /*Fim das subclasses Proprio_Tel_Email, Pai_Tel_Email, Mae_Tel_Email, Urgente_Tel_Email*/
             /*Fim da classe Contactos*/
 
             /*Inicio da classe Pais*/
@@ -128,7 +142,33 @@ body{
                     min-width: 100vh;
                     justify-content: center;
                     overflow: hidden;
+                    margin-bottom: 2rem;
                 }
+
+                /*Inicio das subclasses Pais_Pai, .Pais_Mae*/
+                    .Pais_Pai, .Pais_Mae{
+                        display: flex;
+                        margin-bottom: 5%;
+                    }
+                /*Fim das subclasses Pais_Pai, .Pais_Mae*/
+
+                /*Inicio das subclasses NomePai, ProfissaoPai, Mae_Nome, ProfissaoMae*/
+                    .NomePai, .ProfissaoPai, .Mae_Nome, .ProfissaoMae{
+                        margin-bottom: 1rem;
+                    }
+                /*Fim das subclasses NomePai, ProfissaoPai, Mae_Nome, ProfissaoMae*/
+
+                /*Inicio das subclasses IdadePai, .Mae_Idade*/
+                    .IdadePai, .Mae_Idade{
+                        margin-right: 1rem;
+                    }
+                /*Fim das subclasses IdadePai, .Mae_Idade*/
+
+                /*Inicio das subclasses AlturaPai, .MaeAltura*/
+                    .AlturaPai input, .MaeAltura input{
+                        margin-left: 2.4rem;
+                    }
+                /*Fim das subclasses AlturaPai, .MaeAltura*/
             /*Fim da classe dados Pais*/
 
             /*Inicio da classe Observacao*/
@@ -136,10 +176,41 @@ body{
                     border: 1px solid red;
                     display: flex;
                     align-items: center;
+                    width: 100%;
+                    height: 80%;
                     min-width: 100vh;
                     justify-content: center;
                     overflow: hidden;
                 }
+
+                .Observacoes{
+                    border: 1px solid rgb(4, 0, 255);
+                }
+
+                .Obs_Imagem{
+                    flex: 1;
+                }
+
+                .Foto{
+                    display: flex;
+                    flex: 1;
+                    text-align: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 10rem;
+                }
+
+                .upload{
+                    border-radius: 20px;
+                    border: 2px dashed rgb(131, 127, 127);
+                    color: rgb(131, 127, 127);
+                    background-color: rgb(233, 231, 231);
+                    cursor: pointer;
+                }
+
+                input[type="file"] {
+  display: none;
+}
             /*Fim da classe dados Observacao*/
 
             /*Inicio da classe Observacao*/
