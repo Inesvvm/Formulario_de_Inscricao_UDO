@@ -135,7 +135,7 @@ body{
                 }
             /*Fim da classe dados Pais*/
 
-             /*Inicio da classe Observacao*/
+            /*Inicio da classe Observacao*/
                 .Observacao{
                     border: 1px solid red;
                     display: flex;
@@ -146,6 +146,16 @@ body{
                 }
             /*Fim da classe dados Observacao*/
 
+            /*Inicio da classe Observacao*/
+                .butoes{
+                    display: flex;
+                    align-items: center;
+                    min-width: 100vh;
+                    justify-content: center;
+                    overflow: hidden;
+                }
+            /*Fim da classe dados butoes*/
+            
 
     /*Fim Da Classe main_Direita*/
 /*Fim Da Classe main_Form*/

@@ -272,19 +272,23 @@
                                 <label>Exemplo: problemas de sáude</label>
                             </div>
                             <textarea id="Obs" placeholder="Insira aqui as Observações que deseja fazer"></textarea>
-
-                            <!--Inicio da subclasse butoes-->
-                                <div class="butao_Envia">
-                                    <button class="Envia" type="submit" id="Enviar">Enviar</button>
-                                </div>
-                            <!--Inicio da subclasse butoes-->
                         </div>
                     <!--Fim da classe Observações-->
 
                     <!--Inicio da subclasse butoes-->
                                 <div class="butoes">
-                                    <button type="button" class="Anterior" onclick="Pag_Anterior()">Página Anterior</button>
-                                    <button type="button" class="Seguinte"  onclick="Proxima_Pag()">Próxima Página</button>
+                                    <div class="Anterior Botao_Form">
+                                        <button type="button" onclick="Pag_Anterior()">Página Anterior</button>
+                                    </div>
+
+                                    <div class="Seguinte Botao_Form">
+                                        <button type="button" onclick="Proxima_Pag()">Próxima Página</button>
+                                    </div>
+                                    
+                                    <div class="Envia Botao_Form">
+                                        <button type="submit" id="Enviar">Enviar</button>
+                                    </div>
+                                    
                                 </div>
                     <!--Inicio da subclasse butoes-->
                 </form>

@@ -1,11 +1,32 @@
 const Seguinte_pagina=Array.from(document.querySelectorAll(".Paginas"));//O querySelectorAll seleciona todas as classes que tem Paginas
+const Botoes_Form=Array.from(document.querySelectorAll(".Botao_Form"));
+
 Seguinte_pagina.forEach((pagina)=>{
     pagina.style.display="none";
 });//Serve para aplicar em todos os elemetos da Pag_seguinte e pagina é uma varialvel temporaria com um nome a minha escolha
+
+function Botoes_Pag(i){
+    Botoes_Form.forEach((Botoes_desativados)=>{
+        Botoes_desativados.style.display="none";
+    });
+
+    if(i==0){
+        Botoes_Form[1].style.display="block";//Butao Proxima Página
+    }else if(i==1||i==2){
+        Botoes_Form[0].style.display="block";//Butao Página Anterior
+        Botoes_Form[1].style.display="block";//Butao Proxima Página
+    }else if(i==3){
+        Botoes_Form[0].style.display="block";//Butao Página Anterior
+        Botoes_Form[2].style.display="block";//Butao Enviar
+    }
+}
+
 Seguinte_pagina[0].style.display="block";//Serve para o Primeiro elemento  ficar visivel
+Botoes_Pag(0);
 
 let cont=0;//Variavel para mudar de página
 let i=0;//Variavel para o conteudo da Seguinte_pagina
+let b=0;
 
 //Serve para verificar os elementos 
 function Letras(id){
@@ -110,17 +131,19 @@ function Tamanhos_e_Patterns(id, tamanho_conteudo){
 
 
 
-
 //Inicio Fucção que vai para a página seguinte
     function Proxima_Pag(){
         cont++;
+
         for(i=0; i<Seguinte_pagina.length; i++){
             Seguinte_pagina[i].style.display="none";
         }
         Seguinte_pagina[cont].style.display="block";
+        Botoes_Pag(cont);
     }
         
 //Fim Fucção que vai para a página seguinte
+
 
 //Inicio Fucção que vai para a página anterior
 function Pag_Anterior(){
@@ -129,6 +152,7 @@ function Pag_Anterior(){
         Seguinte_pagina[i].style.display="none";
     }
     Seguinte_pagina[cont].style.display="block";
+    Botoes_Pag(cont);
 }
 //Fim Funcção que vai para a página seguinte
 
